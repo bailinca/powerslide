@@ -17,6 +17,8 @@ var common = {
 		filename: 'bundle.js'
 	},
 
+	devtool: 'source-map',
+
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'powerslide'

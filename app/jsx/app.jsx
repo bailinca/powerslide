@@ -6,12 +6,13 @@ import Edit from './edit';
 import Present from './present';
 
 ((function() {
-	// get info from localStorage & set the initial state on App
+	// TODO: get info from localStorage & set the initial state on App
 	var AppElement = document.createElement('div');
 	document.body.appendChild(AppElement);
 	var App = React.createClass({
 		render() {
 			return <div>
+				App
 				<Header />
 				<Edit />
 				<Present />

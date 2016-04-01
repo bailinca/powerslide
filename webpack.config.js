@@ -19,7 +19,7 @@ var common = {
 
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'React es6'
+			title: 'powerslide'
 		})
 	],
 

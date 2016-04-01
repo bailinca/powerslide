@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Present = React.createClass({
+const Present = React.createClass({
 	render() {
 		return <div>
 			Present

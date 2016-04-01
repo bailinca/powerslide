@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Pic = React.createClass({
+const Pic = React.createClass({
 	render() {
 		return <div>
 			Pic

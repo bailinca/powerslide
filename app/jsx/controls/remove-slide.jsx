@@ -1,6 +1,6 @@
 import React from 'react';
 
-var RemoveSlide = React.createClass({
+const RemoveSlide = React.createClass({
 	render() {
 		return <div>
 			RemoveSlide

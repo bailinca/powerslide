@@ -1,6 +1,6 @@
 import React from 'react';
 
-var TitleOnly = React.createClass({
+const TitleOnly = React.createClass({
 	render() {
 		return <div>
 			TitleOnly

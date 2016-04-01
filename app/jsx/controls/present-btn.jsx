@@ -1,6 +1,6 @@
 import React from 'react';
 
-var PresentBtn = React.createClass({
+const PresentBtn = React.createClass({
 	render() {
 		return <div>
 			PresentBtn

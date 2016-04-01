@@ -1,6 +1,6 @@
 import React from 'react';
 
-var EditBtn = React.createClass({
+const EditBtn = React.createClass({
 	render() {
 		return <div>
 			EditBtn

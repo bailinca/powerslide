@@ -5,7 +5,7 @@ import RemoveSlide from './remove-slide.jsx';
 import PrevSlide from './prev-slide.jsx';
 import NextSlide from './next-slide.jsx';
 
-var Controls = React.createClass({
+const Controls = React.createClass({
 	render() {
 		return <div>
 			Controls

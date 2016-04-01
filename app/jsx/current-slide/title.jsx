@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Title = React.createClass({
+const Title = React.createClass({
 	render() {
 		return <div>
 			Title

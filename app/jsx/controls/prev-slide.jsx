@@ -1,6 +1,6 @@
 import React from 'react';
 
-var PrevSlide = React.createClass({
+const PrevSlide = React.createClass({
 	render() {
 		return <div>
 			PrevSlide

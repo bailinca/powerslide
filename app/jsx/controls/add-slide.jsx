@@ -1,6 +1,6 @@
 import React from 'react';
 
-var AddSlide = React.createClass({
+const AddSlide = React.createClass({
 	render() {
 		return <div>
 			AddSlide

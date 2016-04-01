@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Text = React.createClass({
+const Text = React.createClass({
 	render() {
 		return <div>
 			Text

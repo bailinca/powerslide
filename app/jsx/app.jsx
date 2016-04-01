@@ -7,9 +7,9 @@ import Present from './present';
 
 ((function() {
 	// TODO: get info from localStorage & set the initial state on App
-	var AppElement = document.createElement('div');
+	const AppElement = document.createElement('div');
 	document.body.appendChild(AppElement);
-	var App = React.createClass({
+	const App = React.createClass({
 		render() {
 			return <div>
 				App

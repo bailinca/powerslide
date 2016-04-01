@@ -1,6 +1,6 @@
 import React from 'react';
 
-var SlideTypeChooser = React.createClass({
+const SlideTypeChooser = React.createClass({
 	render() {
 		return <div>
 			SlideTypeChooser

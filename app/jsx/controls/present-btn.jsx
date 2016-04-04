@@ -2,7 +2,7 @@ import React from 'react';
 
 const PresentBtn = React.createClass({
 	render() {
-		return <div>
+		return <div className = 'present-btn'>
 			PresentBtn
 		</div>;
 	}

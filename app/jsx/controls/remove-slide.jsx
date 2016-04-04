@@ -2,7 +2,7 @@ import React from 'react';
 
 const RemoveSlide = React.createClass({
 	render() {
-		return <div>
+		return <div className = 'remove-slide'>
 			RemoveSlide
 		</div>;
 	}

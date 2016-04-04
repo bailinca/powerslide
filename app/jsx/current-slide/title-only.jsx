@@ -2,7 +2,7 @@ import React from 'react';
 
 const TitleOnly = React.createClass({
 	render() {
-		return <div>
+		return <div className = 'title-only'>
 			TitleOnly
 		</div>;
 	}

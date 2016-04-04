@@ -11,7 +11,7 @@ import Present from './present';
 	document.body.appendChild(AppElement);
 	const App = React.createClass({
 		render() {
-			return <div>
+			return <div className = 'app'>
 				App
 				<Header />
 				<Edit />

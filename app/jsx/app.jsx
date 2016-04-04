@@ -14,13 +14,13 @@ import Present from './present';
 			'sidebar': 'controls',
 			'slides': [
 				{
-					'type': 'titlePic',
-					'title': 'Slide title'
-				},
-				{
 					'type': 'titleText',
 					'title': 'Slide title',
 					'text': 'Slide text'
+				},
+				{
+					'type': 'titlePic',
+					'title': 'Slide title'
 				}
 			]
 		};

@@ -22,6 +22,7 @@ const CurrentSlide = React.createClass({
 						changeHandler = {this.props.changeHandler}
 					/>
 			}
+			{this.props.state.currentSlide + 1 + ' / ' + this.props.state.slides.length}
 		</div>;
 	}
 });

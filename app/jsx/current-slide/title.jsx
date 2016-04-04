@@ -9,8 +9,7 @@ const Title = React.createClass({
 	render() {
 		return <div className = 'component title'>
 			<input
-				value =
-					{this.props.state.slides[this.props.state.currentSlide].title}
+				value =	{this.props.state.slides[this.props.state.currentSlide].title}
 				onChange = {this.changeHandler}
 			/>
 		</div>;

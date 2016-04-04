@@ -7,8 +7,7 @@ import NextSlide from './next-slide.jsx';
 
 const Controls = React.createClass({
 	render() {
-		return <div className = 'controls'>
-			Controls
+		return <div className = 'component controls'>
 			<PresentBtn />
 			<AddSlide />
 			<RemoveSlide />

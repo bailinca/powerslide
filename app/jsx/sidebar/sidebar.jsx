@@ -4,8 +4,7 @@ import SlideTypeChooser from './slide-type-chooser.jsx';
 
 const Sidebar = React.createClass({
 	render() {
-		return <div className = 'sidebar'>
-			Sidebar
+		return <div className = 'component sidebar'>
 			<Controls />
 			<SlideTypeChooser />
 		</div>;

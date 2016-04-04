@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = React.createClass({
 	render() {
-		return <div className = 'header'>
+		return <div className = 'component header'>
 			Header
 		</div>;
 	}

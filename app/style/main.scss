@@ -2,20 +2,27 @@ body {
     background: #f0f0f0;
 }
 
+.component {
+	display: flex;
+	border: 1px solid orange;
+}
 .app {
-
+	height: 98vh;
+	flex-direction: column;
 }
 
 .edit {
-
+	height: 90%;
 }
 
 .header {
-
+	height: 10%;
 }
 
 .present {
-
+	height: 90%;
+	// temporary:
+	display: none;
 }
 
 .add-slide {
@@ -23,7 +30,9 @@ body {
 }
 
 .controls {
-
+	flex-direction: column;
+	align-content: space-around;
+	justify-content: space-between;
 }
 
 .edit-btn {
@@ -47,7 +56,8 @@ body {
 }
 
 .current-slide {
-
+	flex-direction: column;
+	width: 80%;
 }
 
 .pic {
@@ -63,17 +73,24 @@ body {
 }
 
 .title-only {
-
+	flex-direction: column;
+	// temporary:
+	display: none;
 }
 .title-pic {
-
+	flex-direction: column;
+	// temporary:
+	display: none;
 }
 .title-text {
-
+	flex-direction: column;
 }
 .sidebar {
-
+	flex-direction: column;
+	width: 20%;
 }
 .slide-type-chooser {
-
+	flex-direction: column;
+	// temporary:
+	display: none;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const NextSlide = React.createClass({
 	render() {
-		return <div className = 'next-slide'>
+		return <div className = 'component next-slide'>
 			NextSlide
 		</div>;
 	}

@@ -10,9 +10,11 @@ import Present from './present';
 	const AppElement = document.createElement('div');
 	document.body.appendChild(AppElement);
 	const App = React.createClass({
+		getInitialState() {
+			return {};
+		},
 		render() {
-			return <div className = 'app'>
-				App
+			return <div className = 'component app'>
 				<Header />
 				<Edit />
 				<Present />

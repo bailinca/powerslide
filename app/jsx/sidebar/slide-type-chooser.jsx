@@ -2,7 +2,7 @@ import React from 'react';
 
 const SlideTypeChooser = React.createClass({
 	render() {
-		return <div className = 'slide-type-chooser'>
+		return <div className = 'component slide-type-chooser'>
 			SlideTypeChooser
 		</div>;
 	}

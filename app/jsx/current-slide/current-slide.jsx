@@ -5,8 +5,7 @@ import TitleOnly from './title-only.jsx';
 
 const CurrentSlide = React.createClass({
 	render() {
-		return <div className = 'current-slide'>
-			CurrentSlide
+		return <div className = 'component current-slide'>
 			<TitleText />
 			<TitlePic />
 			<TitleOnly />

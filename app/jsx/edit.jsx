@@ -4,8 +4,7 @@ import Sidebar from './sidebar/sidebar.jsx';
 
 const Edit = React.createClass({
 	render() {
-		return <div className = 'edit'>
-			Edit
+		return <div className = 'component edit'>
 			<CurrentSlide />
 			<Sidebar />
 		</div>;

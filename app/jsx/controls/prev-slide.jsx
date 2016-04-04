@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrevSlide = React.createClass({
 	render() {
-		return <div className = 'prev-slide'>
+		return <div className = 'component prev-slide'>
 			PrevSlide
 		</div>;
 	}

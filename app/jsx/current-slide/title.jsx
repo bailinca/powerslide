@@ -2,7 +2,7 @@ import React from 'react';
 
 const Title = React.createClass({
 	render() {
-		return <div className = 'title'>
+		return <div className = 'component title'>
 			Title
 		</div>;
 	}

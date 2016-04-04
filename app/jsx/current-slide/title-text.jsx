@@ -4,7 +4,7 @@ import Text from './text.jsx';
 
 const TitleText = React.createClass({
 	render() {
-		return <div className = 'title-text'>
+		return <div className = 'component title-text'>
 			TitleText
 			<Title />
 			<Text />

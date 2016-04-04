@@ -13,14 +13,14 @@ const CurrentSlide = React.createClass({
 						state = {this.props.state}
 						changeHandler = {this.props.changeHandler}
 					/> : type === 'titlePic' ?
-				<TitlePic
-					state = {this.props.state}
-					changeHandler = {this.props.changeHandler}
-				/> :
-				<TitleOnly
-					state = {this.props.state}
-					changeHandler = {this.props.changeHandler}
-				/>
+					<TitlePic
+						state = {this.props.state}
+						changeHandler = {this.props.changeHandler}
+					/> :
+					<TitleOnly
+						state = {this.props.state}
+						changeHandler = {this.props.changeHandler}
+					/>
 			}
 		</div>;
 	}

@@ -17,6 +17,10 @@ body {
 
 .header {
 	height: 10%;
+	background-image: radial-gradient(ellipse farthest-corner at center top, #9ab1c7 0%, #1a242f 100%);
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .present {

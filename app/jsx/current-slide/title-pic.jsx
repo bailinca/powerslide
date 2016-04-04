@@ -6,8 +6,8 @@ const TitlePic = React.createClass({
 	render() {
 		return <div className = 'component title-pic'>
 			TitlePic
-			<Title />
-			<Pic />
+			<Title state = {this.props.state} />
+			<Pic state = {this.props.state} />
 		</div>;
 	}
 });

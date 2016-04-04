@@ -4,7 +4,7 @@ body {
 
 .component {
 	display: flex;
-	border: 1px solid orange;
+	border: 1px solid grey;
 }
 .app {
 	height: 98vh;
@@ -21,8 +21,6 @@ body {
 
 .present {
 	height: 90%;
-	// temporary:
-	display: none;
 }
 
 .add-slide {
@@ -56,6 +54,7 @@ body {
 }
 
 .current-slide {
+	height: 100%;
 	flex-direction: column;
 	width: 80%;
 }
@@ -65,11 +64,18 @@ body {
 }
 
 .text {
-
+	height: 50%;
+	width: 70%;
 }
 
 .title {
+	height: 10%;
+	width: 70%;
+}
 
+.text input, .title input{
+	width: 100%;
+	text-align: center;
 }
 
 .title-only {
@@ -84,6 +90,9 @@ body {
 }
 .title-text {
 	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
 }
 .sidebar {
 	flex-direction: column;

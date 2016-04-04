@@ -28,11 +28,24 @@ import Present from './present';
 		getInitialState() {
 			return state;
 		},
+		currentSlideChangeHandler(slides) {
+			console.log('REA', slides);
+			this.setState({slides});
+			localStorage.setItem('state', JSON.stringify(this.state));
+		},
 		render() {
 			return <div className = 'component app'>
 				<Header />
-				<Edit />
-				<Present />
+				{this.state.view === 'edit' ?
+					<Edit
+						state = {this.state}
+						currentSlideChangeHandler = {this.currentSlideChangeHandler}
+					/> :
+					<Present
+						state = {this.state}
+						sideBarChangeHandler = {this.sideBarChangeHandler}
+					/>
+				}
 			</div>;
 		}
 	});

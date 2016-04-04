@@ -5,8 +5,14 @@ import Text from './text.jsx';
 const TitleText = React.createClass({
 	render() {
 		return <div className = 'component title-text'>
-			<Title state = {this.props.state} changeHandler = {this.props.changeHandler}/>
-			<Text state = {this.props.state} changeHandler = {this.props.changeHandler}/>
+			<Title
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
+			<Text
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
 		</div>;
 	}
 });

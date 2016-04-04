@@ -4,7 +4,7 @@ const Title = React.createClass({
 	changeHandler(e) {
 		let slides = this.props.state.slides;
 		slides[this.props.state.currentSlide].title = e.target.value;
-		this.props.changeHandler(slides);
+		this.props.updateAppState(slides);
 	},
 	render() {
 		return <div className = 'component title'>

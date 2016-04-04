@@ -10,7 +10,10 @@ const Controls = React.createClass({
 		return <div className = 'component controls'>
 			<PresentBtn />
 			<AddSlide />
-			<RemoveSlide />
+			<RemoveSlide
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
 			<PrevSlide />
 			<NextSlide />
 		</div>;

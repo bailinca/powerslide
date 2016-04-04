@@ -10,17 +10,33 @@ import Present from './present';
 	if (!state) {
 		state = {
 			'view': 'edit',
-			'currentSlide': 0,
+			'currentSlide': 5,
 			'sidebar': 'controls',
 			'slides': [
 				{
 					'type': 'titleText',
-					'title': 'Slide title',
+					'title': 'Slide 1',
 					'text': 'Slide text'
 				},
 				{
 					'type': 'titlePic',
-					'title': 'Slide title'
+					'title': 'Slide 2'
+				},
+				{
+					'type': 'titlePic',
+					'title': 'Slide 3'
+				},
+				{
+					'type': 'titlePic',
+					'title': 'Slide 4'
+				},
+				{
+					'type': 'titlePic',
+					'title': 'Slide 5'
+				},
+				{
+					'type': 'titleOnly',
+					'title': 'Slide 6'
 				}
 			]
 		};
@@ -32,8 +48,8 @@ import Present from './present';
 		getInitialState() {
 			return state;
 		},
-		currentSlideChangeHandler(slides) {
-			this.setState({slides});
+		updateAppState(slides) {
+			this.setState(slides);
 			localStorage.setItem('state', JSON.stringify(this.state));
 		},
 		render() {
@@ -43,11 +59,11 @@ import Present from './present';
 					this.state.view === 'edit' ?
 						<Edit
 							state = {this.state}
-							currentSlideChangeHandler = {this.currentSlideChangeHandler}
+							updateAppState = {this.updateAppState}
 						/> :
 						<Present
 							state = {this.state}
-							sideBarChangeHandler = {this.sideBarChangeHandler}
+							updateAppState = {this.updateAppState}
 						/>
 					}
 			</div>;

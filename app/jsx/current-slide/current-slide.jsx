@@ -11,15 +11,15 @@ const CurrentSlide = React.createClass({
 				type === 'titleText' ?
 					<TitleText
 						state = {this.props.state}
-						changeHandler = {this.props.changeHandler}
+						updateAppState = {this.props.updateAppState}
 					/> : type === 'titlePic' ?
 					<TitlePic
 						state = {this.props.state}
-						changeHandler = {this.props.changeHandler}
+						updateAppState = {this.props.updateAppState}
 					/> :
 					<TitleOnly
 						state = {this.props.state}
-						changeHandler = {this.props.changeHandler}
+						updateAppState = {this.props.updateAppState}
 					/>
 			}
 			{this.props.state.currentSlide + 1 + ' / ' + this.props.state.slides.length}

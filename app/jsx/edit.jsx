@@ -7,11 +7,11 @@ const Edit = React.createClass({
 		return <div className = 'component edit'>
 			<CurrentSlide
 				state = {this.props.state}
-				changeHandler = {this.props.currentSlideChangeHandler}
+				updateAppState = {this.props.updateAppState}
 			/>
 			<Sidebar
 				state = {this.props.state}
-				changeHandler = {this.props.sideBarChangeHandler}
+				updateAppState = {this.props.updateAppState}
 			/>
 		</div>;
 	}

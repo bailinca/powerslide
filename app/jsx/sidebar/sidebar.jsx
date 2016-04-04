@@ -7,7 +7,10 @@ const Sidebar = React.createClass({
 		return <div className = 'component sidebar'>
 			{
 				this.props.state.sidebar === 'controls' ?
-					<Controls state = {this.props.state}/> :
+					<Controls
+						state = {this.props.state}
+						updateAppState = {this.props.updateAppState}
+					/> :
 					<SlideTypeChooser state = {this.props.state}/>
 			}
 		</div>;

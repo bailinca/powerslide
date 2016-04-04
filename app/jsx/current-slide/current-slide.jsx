@@ -5,19 +5,23 @@ import TitleOnly from './title-only.jsx';
 
 const CurrentSlide = React.createClass({
 	render() {
+		const type = this.props.state.slides[this.props.state.currentSlide].type;
 		return <div className = 'component current-slide'>
-			<TitleText
-				state = {this.props.state}
-				changeHandler = {this.props.changeHandler}
-			/>
-			<TitlePic
-				state = {this.props.state}
-				changeHandler = {this.props.changeHandler}
-			/>
-			<TitleOnly
-				state = {this.props.state}
-				changeHandler = {this.props.changeHandler}
-			/>
+			{
+				type === 'titleText' ?
+					<TitleText
+						state = {this.props.state}
+						changeHandler = {this.props.changeHandler}
+					/> : type === 'titlePic' ?
+				<TitlePic
+					state = {this.props.state}
+					changeHandler = {this.props.changeHandler}
+				/> :
+				<TitleOnly
+					state = {this.props.state}
+					changeHandler = {this.props.changeHandler}
+				/>
+			}
 		</div>;
 	}
 });

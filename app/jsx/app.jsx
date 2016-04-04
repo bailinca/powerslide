@@ -14,9 +14,8 @@ import Present from './present';
 			'sidebar': 'controls',
 			'slides': [
 				{
-					'type': 'titleText',
-					'title': 'Slide title',
-					'text': 'Slide text'
+					'type': 'titleOnly',
+					'title': 'Slide title'
 				}
 			]
 		};
@@ -29,23 +28,23 @@ import Present from './present';
 			return state;
 		},
 		currentSlideChangeHandler(slides) {
-			console.log('REA', slides);
 			this.setState({slides});
 			localStorage.setItem('state', JSON.stringify(this.state));
 		},
 		render() {
 			return <div className = 'component app'>
 				<Header />
-				{this.state.view === 'edit' ?
-					<Edit
-						state = {this.state}
-						currentSlideChangeHandler = {this.currentSlideChangeHandler}
-					/> :
-					<Present
-						state = {this.state}
-						sideBarChangeHandler = {this.sideBarChangeHandler}
-					/>
-				}
+				{
+					this.state.view === 'edit' ?
+						<Edit
+							state = {this.state}
+							currentSlideChangeHandler = {this.currentSlideChangeHandler}
+						/> :
+						<Present
+							state = {this.state}
+							sideBarChangeHandler = {this.sideBarChangeHandler}
+						/>
+					}
 			</div>;
 		}
 	});

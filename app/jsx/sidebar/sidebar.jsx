@@ -5,8 +5,11 @@ import SlideTypeChooser from './slide-type-chooser.jsx';
 const Sidebar = React.createClass({
 	render() {
 		return <div className = 'component sidebar'>
-			<Controls state = {this.props.state}/>
-			<SlideTypeChooser state = {this.props.state}/>
+			{
+				this.props.state.sidebar === 'controls' ?
+					<Controls state = {this.props.state}/> :
+					<SlideTypeChooser state = {this.props.state}/>
+			}
 		</div>;
 	}
 });

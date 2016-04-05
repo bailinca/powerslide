@@ -9,7 +9,10 @@ const TitlePic = React.createClass({
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>
-			<Pic state = {this.props.state} />
+			<Pic
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
 		</div>;
 	}
 });

@@ -1,5 +1,5 @@
 body {
-    background: #f0f0f0;
+	margin: 0;
 }
 
 .component {
@@ -16,8 +16,9 @@ body {
 }
 
 .app {
-	height: 98vh;
+	height: 100vh;
 	flex-direction: column;
+	background: #454545;
 }
 
 .edit {
@@ -77,8 +78,22 @@ body {
 }
 
 .text, .pic {
-	height: 50%;
+	height: 70%;
 	width: 70%;
+}
+
+.pic {
+	flex-direction: column;
+	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.pic > input {
+	margin-top: -4%;
+	width: 50%;
+	height: 6%;
 }
 
 .title {
@@ -114,8 +129,8 @@ body {
 }
 
 .sidebar-title-text, .sidebar-title-pic, .sidebar-title-only {
-	height: 30%;
-	width: 85%;
+	height: 14%;
+	width: 86%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;

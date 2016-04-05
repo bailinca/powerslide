@@ -10,7 +10,7 @@ import Present from './present';
 	if (!state) {
 		state = {
 			'view': 'edit',
-			'currentSlide': 5,
+			'currentSlide': 0,
 			'sidebar': 'controls',
 			'slides': [
 				{
@@ -20,18 +20,16 @@ import Present from './present';
 				},
 				{
 					'type': 'titlePic',
-					'title': 'Slide 2'
+					'title': 'Slide 2',
+					'url': 'http://www.astropython.org/static/images/add_new.png'
 				},
 				{
 					'type': 'titlePic',
-					'title': 'Slide 3'
+					'title': 'Slide 4',
+					'url': 'https://wiki.mozilla.org/images/e/e9/Simage.png'
 				},
 				{
-					'type': 'titlePic',
-					'title': 'Slide 4'
-				},
-				{
-					'type': 'titlePic',
+					'type': 'titleOnly',
 					'title': 'Slide 5'
 				},
 				{

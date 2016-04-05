@@ -8,7 +8,6 @@ const PrevSlide = React.createClass({
 	},
 	render() {
 		return <div className = 'component prev-slide' onClick = {this.clickHandler}>
-			PrevSlide
 		</div>;
 	}
 });

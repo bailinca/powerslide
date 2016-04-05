@@ -12,7 +12,6 @@ const RemoveSlide = React.createClass({
 	},
 	render() {
 		return <div className = 'component remove-slide' onClick = {this.clickHandler}>
-			RemoveSlide
 		</div>;
 	}
 });

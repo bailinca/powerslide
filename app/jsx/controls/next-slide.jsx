@@ -8,7 +8,6 @@ const NextSlide = React.createClass({
 	},
 	render() {
 		return <div className = 'component next-slide' onClick = {this.clickHandler}>
-			NextSlide
 		</div>;
 	}
 });

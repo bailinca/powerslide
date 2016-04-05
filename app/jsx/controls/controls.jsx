@@ -8,14 +8,26 @@ import NextSlide from './next-slide.jsx';
 const Controls = React.createClass({
 	render() {
 		return <div className = 'component controls'>
-			<PresentBtn />
-			<AddSlide />
+			<PresentBtn
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
+			<AddSlide
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
 			<RemoveSlide
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>
-			<PrevSlide />
-			<NextSlide />
+			<PrevSlide
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
+			<NextSlide
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
 		</div>;
 	}
 });

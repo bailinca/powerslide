@@ -11,7 +11,10 @@ const Sidebar = React.createClass({
 						state = {this.props.state}
 						updateAppState = {this.props.updateAppState}
 					/> :
-					<SlideTypeChooser state = {this.props.state}/>
+					<SlideTypeChooser
+						state = {this.props.state}
+						updateAppState = {this.props.updateAppState}
+					/>
 			}
 		</div>;
 	}

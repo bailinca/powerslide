@@ -48,8 +48,8 @@ import Present from './present';
 		getInitialState() {
 			return state;
 		},
-		updateAppState(slides) {
-			this.setState(slides);
+		updateAppState(newState) {
+			this.setState(newState);
 			localStorage.setItem('state', JSON.stringify(this.state));
 		},
 		render() {

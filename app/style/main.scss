@@ -87,9 +87,36 @@ body {
 	height: 95%;
 }
 .sidebar {
-	flex-direction: column;
+	height: 100%;
 	width: 20%;
-}
-.slide-type-chooser {
 	flex-direction: column;
+}
+
+.slide-type-chooser {
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.sidebar-title-text, .sidebar-title-pic, .sidebar-title-only {
+	height: 20%;
+	width: 70%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.sidebar-title-text {
+	background-image: url('http://www70.zippyshare.com/i/0hUrUYLY/112235/title-text.jpg');
+}
+
+.sidebar-title-pic {
+	background-image: url('http://www70.zippyshare.com/i/FcLODqlr/903500/title-pic.jpg');
+}
+
+.sidebar-title-only {
+	background-image: url('http://www46.zippyshare.com/i/zd785nPl/296227/title-only.jpg');
 }

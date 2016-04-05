@@ -5,9 +5,9 @@ const RemoveSlide = React.createClass({
 		let slides = this.props.state.slides;
 		slides.splice(this.props.state.currentSlide, 1);
 		this.props.updateAppState({
+			slides,
 			'currentSlide': slides.length === this.props.state.currentSlide ?
-				(this.props.state.currentSlide - 1) : this.props.state.currentSlide,
-			slides
+				(this.props.state.currentSlide - 1) : this.props.state.currentSlide
 		});
 	},
 	render() {

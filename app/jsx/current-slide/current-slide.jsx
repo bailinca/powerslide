@@ -22,7 +22,10 @@ const CurrentSlide = React.createClass({
 						updateAppState = {this.props.updateAppState}
 					/>
 			}
-			{this.props.state.currentSlide + 1 + ' / ' + this.props.state.slides.length}
+			<h3>
+				{this.props.state.currentSlide + 1 + ' / ' +
+					this.props.state.slides.length}
+			</h3>
 		</div>;
 	}
 });

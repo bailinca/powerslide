@@ -49,8 +49,8 @@ import Present from './present';
 			return state;
 		},
 		updateAppState(newState) {
-			this.setState(newState);
-			localStorage.setItem('state', JSON.stringify(this.state));
+			this.setState(newState,
+				() => localStorage.setItem('state', JSON.stringify(this.state)));
 		},
 		render() {
 			return <div className = 'component app'>

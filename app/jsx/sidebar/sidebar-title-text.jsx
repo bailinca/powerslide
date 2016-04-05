@@ -2,8 +2,7 @@ import React from 'react';
 
 const SidebarTitleText = React.createClass({
 	clickHandler() {
-		this.props.updateAppState({
-		});
+		this.props.addSlide('titleText');
 	},
 	render() {
 		return <div className = 'component sidebar-title-text'

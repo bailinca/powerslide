@@ -1,9 +1,8 @@
 import React from 'react';
 
-const SidebarTitleText = React.createClass({
+const SidebarTitlePic = React.createClass({
 	clickHandler() {
-		this.props.updateAppState({
-		});
+		this.props.addSlide('titlePic');
 	},
 	render() {
 		return <div className = 'component sidebar-title-pic'
@@ -12,4 +11,4 @@ const SidebarTitleText = React.createClass({
 	}
 });
 
-export default SidebarTitleText;
+export default SidebarTitlePic;

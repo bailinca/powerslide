@@ -9,6 +9,14 @@ const SlideTypeChooser = React.createClass({
 			'sidebar': 'controls'
 		});
 	},
+	addSlide(type) {
+		let slides = this.props.state.slides;
+		slides.splice(this.props.state.currentSlide + 1, null, {type});
+		this.props.updateAppState({
+			slides,
+			'currentSlide': this.props.state.currentSlide + 1
+		});
+	},
 	render() {
 		return <div className = 'component slide-type-chooser'
 			onClick = {this.clickHandler}>
@@ -16,14 +24,17 @@ const SlideTypeChooser = React.createClass({
 			<SidebarTitleText
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
+				addSlide = {this.addSlide}
 			/>
 			<SidebarTitlePic
-					state = {this.props.state}
-					updateAppState = {this.props.updateAppState}
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+				addSlide = {this.addSlide}
 			/>
 			<SidebarTitleOnly
-					state = {this.props.state}
-					updateAppState = {this.props.updateAppState}
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+				addSlide = {this.addSlide}
 			/>
 		</div>;
 	}

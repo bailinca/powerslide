@@ -2,8 +2,7 @@ import React from 'react';
 
 const SidebarTitleOnly = React.createClass({
 	clickHandler() {
-		this.props.updateAppState({
-		});
+		this.props.addSlide('titleOnly');
 	},
 	render() {
 		return <div className = 'component sidebar-title-only'

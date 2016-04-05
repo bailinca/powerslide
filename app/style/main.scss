@@ -31,7 +31,6 @@ body {
 	height: 90%;
 }
 
-
 .present {
 	height: 90%;
 }
@@ -43,13 +42,24 @@ body {
 	align-items: center;
 }
 
-.controls > .component {
+.controls .component {
 	cursor: pointer;
 	height: 6%;
 	width: 25%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+.prev-next {
+	width: 100% !important;
+	cursor: initial !important;
+	justify-content: space-around;
+}
+
+.prev-next > .component{
+	height: 100%;
+	width: 25%;
 }
 
 .add-slide {

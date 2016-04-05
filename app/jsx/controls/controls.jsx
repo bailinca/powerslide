@@ -5,6 +5,21 @@ import RemoveSlide from './remove-slide.jsx';
 import PrevSlide from './prev-slide.jsx';
 import NextSlide from './next-slide.jsx';
 
+const PrevNext = React.createClass({
+	render() {
+		return <div className = 'component prev-next'>
+			<PrevSlide
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
+			<NextSlide
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
+		</div>;
+	}
+});
+
 const Controls = React.createClass({
 	render() {
 		return <div className = 'component controls'>
@@ -20,11 +35,7 @@ const Controls = React.createClass({
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>
-			<PrevSlide
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-			/>
-			<NextSlide
+			<PrevNext
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>

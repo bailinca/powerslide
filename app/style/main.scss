@@ -4,7 +4,7 @@ body {
 
 .component {
 	display: flex;
-	border: 1px solid grey;
+	// border: 1px solid grey;
 }
 
 .header {
@@ -39,7 +39,7 @@ body {
 .controls > .component {
 	cursor: pointer;
 	height: 6%;
-	width: 15%;
+	width: 25%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -72,7 +72,7 @@ body {
 .current-slide {
 	height: 100%;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 	text-align: center;
 }
 
@@ -100,7 +100,7 @@ body {
 }
 .sidebar {
 	height: 100%;
-	width: 20%;
+	width: 10%;
 	flex-direction: column;
 	background-color: #e3a95c;
 }
@@ -114,8 +114,8 @@ body {
 }
 
 .sidebar-title-text, .sidebar-title-pic, .sidebar-title-only {
-	height: 20%;
-	width: 70%;
+	height: 30%;
+	width: 85%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;

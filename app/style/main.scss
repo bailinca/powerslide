@@ -6,14 +6,6 @@ body {
 	display: flex;
 	border: 1px solid grey;
 }
-.app {
-	height: 98vh;
-	flex-direction: column;
-}
-
-.edit {
-	height: 90%;
-}
 
 .header {
 	height: 10%;
@@ -23,15 +15,18 @@ body {
 	justify-content: center;
 }
 
-.present {
+.app {
+	height: 98vh;
+	flex-direction: column;
+}
+
+.edit {
 	height: 90%;
 }
 
-.add-slide {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-image: url('http://www.astropython.org/static/images/add_new.png');
+
+.present {
+	height: 90%;
 }
 
 .controls {
@@ -44,41 +39,33 @@ body {
 .controls > .component {
 	cursor: pointer;
 	height: 6%;
-	width: 30%;
-}
-
-.edit-btn {
+	width: 15%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+.add-slide {
+	background-image: url('http://www.astropython.org/static/images/add_new.png');
+}
+
+.edit-btn {
 	background-image: url('https://cdn3.iconfinder.com/data/icons/simplius-pack/512/pencil_and_paper-512.png');
 }
 
 .next-slide {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
 	background-image: url('http://s24.postimg.org/46awvtq11/forward.png');
 }
 
 .present-btn {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
 	background-image: url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/eye-24-512.png');
 }
 
 .prev-slide {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
 	background-image: url('http://s24.postimg.org/so30jpslh/back.png');
 }
 
 .remove-slide {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
 	background-image: url('https://cdn2.iconfinder.com/data/icons/web/512/Trash_Can-512.png');
 }
 
@@ -115,6 +102,7 @@ body {
 	height: 100%;
 	width: 20%;
 	flex-direction: column;
+	background-color: #e3a95c;
 }
 
 .slide-type-chooser {

@@ -1,4 +1,4 @@
-# powerslide
+# Powerslide
 
 ```
 npm i

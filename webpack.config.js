@@ -43,7 +43,10 @@ var common = {
 				loaders: ['react-hot', 'babel'],
 				include: path.resolve(ROOT_PATH, 'app')
 			},
-
+			{
+				test: [/\.png?$/, /\.jpg?$/],
+				loaders: ['file']
+			},
 			{
 				test: /\.scss$/,
 				loaders: ['style', 'css', 'sass']
@@ -68,9 +71,7 @@ switch (process.env.npm_lifecycle_event) {
 				})
 			]
 		});
-
 		break;
-
 	case 'start':
 		module.exports = merge(common, {
 			entry: [
@@ -79,7 +80,6 @@ switch (process.env.npm_lifecycle_event) {
 			]
 		});
 		break;
-
 	default:
 		break;
 }

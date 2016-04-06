@@ -2,7 +2,6 @@ import React from 'react';
 import TitleText from './title-text.jsx';
 import TitlePic from './title-pic.jsx';
 import TitleOnly from './title-only.jsx';
-import PresentControls from '../controls/present-controls.jsx';
 
 const CurrentSlide = React.createClass({
 	render() {
@@ -29,13 +28,6 @@ const CurrentSlide = React.createClass({
 					{this.props.state.currentSlide + 1 + ' / ' +
 						this.props.state.slides.length}
 				</h3> : null
-			}
-			{
-				this.props.state.view === 'present' ?
-				<PresentControls
-					state = {this.props.state}
-					updateAppState = {this.props.updateAppState}
-				/> : null
 			}
 		</div>;
 	}

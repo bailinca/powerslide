@@ -3,9 +3,11 @@ body {
 	color: #e7e7e7;
 	margin: 0;
 }
+h3 {
+	color: #cccccc;
+}
 .component {
 	display: flex;
-	// border: 1px solid grey;
 }
 .header {
 	font-family: 'Poiret One', cursive;
@@ -149,7 +151,6 @@ body {
 	height: 14%;
 	width: 86%;
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: contain;
 	cursor: pointer;
 	border: 1px solid #454545;

@@ -118,8 +118,12 @@ body {
 	width: 70%;
 }
 
-.text > input, .title > input{
+.text > textarea, .title > input {
 	width: 100%;
+	padding: 10px;
+}
+
+.title > input {
 	text-align: center;
 }
 

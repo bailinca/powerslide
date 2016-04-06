@@ -8,7 +8,7 @@ const Text = React.createClass({
 	},
 	render() {
 		return <div className = 'component text'>
-			<input
+			<textarea
 				value =	{this.props.state.slides[this.props.state.currentSlide].text}
 				onChange = {this.changeHandler}
 			/>

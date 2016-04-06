@@ -35,6 +35,7 @@ body {
 	padding: 15px;
 	height: 100%;
 	flex-direction: column;
+	align-items: center;
 }
 
 .controls {
@@ -71,7 +72,7 @@ body {
 
 .edit-btn {
 	cursor: pointer;
-	height: 5%;
+	height: 100%;
 	width: 5%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -89,6 +90,11 @@ body {
 
 .present-btn {
 	background-image: url('https://tinypng.com/site/output/cvp3vfrtfn3qg8cc.png/preview.png');
+}
+
+.present-controls {
+	background-color: #e3a95c;
+	height: 5%;
 }
 
 .prev-slide {

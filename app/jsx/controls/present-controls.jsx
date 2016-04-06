@@ -4,7 +4,7 @@ import PrevNext from './prev-next.jsx';
 
 const PresentControls = React.createClass({
 	render() {
-		return <div className = 'component present'>
+		return <div className = 'component present-controls'>
 			<PrevNext
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}

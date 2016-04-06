@@ -32,7 +32,6 @@ body {
 }
 
 .present {
-	padding: 15px;
 	height: 100%;
 	flex-direction: column;
 	align-items: center;
@@ -72,7 +71,7 @@ body {
 
 .edit-btn {
 	cursor: pointer;
-	height: 100%;
+	height: 75%;
 	width: 5%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -93,8 +92,10 @@ body {
 }
 
 .present-controls {
-	background-color: #e3a95c;
+	background-color: #a6a6a6;
 	height: 5%;
+	align-items: center;
+	justify-content: center;
 }
 
 .prev-slide {
@@ -114,6 +115,10 @@ body {
 	flex-direction: column;
 	width: 90%;
 	text-align: center;
+}
+
+.present > .current-slide {
+	width: 100%;
 }
 
 .text, .pic {
@@ -194,4 +199,10 @@ body {
 
 .sidebar-title-only {
 	background-image: url('../img/title-only.jpg');
+}
+
+.present .prev-next {
+	height: 75%;
+	width: 15% !important;
+	margin-left: 5%;
 }

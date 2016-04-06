@@ -3,6 +3,9 @@ import React from 'react';
 const RemoveSlide = React.createClass({
 	clickHandler() {
 		let slides = this.props.state.slides;
+		if (slides.length === 1) {
+			return;
+		}
 		slides.splice(this.props.state.currentSlide, 1);
 		this.props.updateAppState({
 			slides,

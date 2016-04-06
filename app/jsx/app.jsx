@@ -26,7 +26,8 @@ import Present from './present';
 				{
 					'type': 'titlePic',
 					'title': 'Slide 4',
-					'url': 'https://wiki.mozilla.org/images/e/e9/Simage.png'
+					'url': 'http://www.heyuguys.com/images/2011/11/' +
+						'Small-Fry-Toy-Story-Short.jpg'
 				},
 				{
 					'type': 'titleOnly',

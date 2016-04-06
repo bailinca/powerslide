@@ -1,3 +1,6 @@
 # powerslide
-npm run build
+
+```
+npm i
 npm start
+```

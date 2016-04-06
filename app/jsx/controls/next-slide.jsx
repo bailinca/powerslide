@@ -2,9 +2,10 @@ import React from 'react';
 
 const NextSlide = React.createClass({
 	clickHandler() {
-		this.props.updateAppState({
-			'currentSlide': this.props.state.currentSlide + 1
-		});
+		let currentSlide = this.props.state.currentSlide + 1;
+		if (currentSlide < this.props.state.slides.length) {
+			this.props.updateAppState({currentSlide});
+		}
 	},
 	render() {
 		return <div className = 'component next-slide' onClick = {this.clickHandler}>

@@ -52,7 +52,9 @@ import Present from './present';
 		},
 		render() {
 			return <div className = 'component app'>
-				<Header />
+				{
+					this.state.view === 'edit' ? <Header /> : null
+				}
 				{
 					this.state.view === 'edit' ?
 						<Edit

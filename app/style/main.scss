@@ -32,7 +32,9 @@ body {
 }
 
 .present {
-	height: 90%;
+	padding: 15px;
+	height: 100%;
+	flex-direction: column;
 }
 
 .controls {
@@ -53,6 +55,7 @@ body {
 
 .prev-next {
 	width: 100% !important;
+	height: 6%;
 	cursor: initial !important;
 	justify-content: space-around;
 }
@@ -67,10 +70,20 @@ body {
 }
 
 .edit-btn {
+	cursor: pointer;
+	height: 5%;
+	width: 5%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-image: url('https://cdn3.iconfinder.com/data/icons/simplius-pack/512/pencil_and_paper-512.png');
 }
 
 .next-slide {
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-image: url('https://tinypng.com/site/output/3bqauvfalu3bkrr8.png/next.png');
 }
 
@@ -79,6 +92,10 @@ body {
 }
 
 .prev-slide {
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-image: url('https://tinypng.com/site/output/91jk02eelgsfl7v1.png/back.png');
 }
 

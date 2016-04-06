@@ -1,9 +1,13 @@
 import React from 'react';
+import CurrentSlide from './current-slide/current-slide.jsx';
 
 const Present = React.createClass({
 	render() {
 		return <div className = 'component present'>
-			Present
+			<CurrentSlide
+				state = {this.props.state}
+				updateAppState = {this.props.updateAppState}
+			/>
 		</div>;
 	}
 });

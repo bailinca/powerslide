@@ -11,6 +11,7 @@ const Text = React.createClass({
 			<textarea
 				value =	{this.props.state.slides[this.props.state.currentSlide].text}
 				onChange = {this.changeHandler}
+				disabled = {this.props.state.view === 'edit' ? false : true}
 			/>
 		</div>;
 	}

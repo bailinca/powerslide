@@ -23,10 +23,13 @@ const CurrentSlide = React.createClass({
 						updateAppState = {this.props.updateAppState}
 					/>
 			}
-			<h3>
-				{this.props.state.currentSlide + 1 + ' / ' +
-					this.props.state.slides.length}
-			</h3>
+			{
+				this.props.state.view === 'edit' ?
+				<h3>
+					{this.props.state.currentSlide + 1 + ' / ' +
+						this.props.state.slides.length}
+				</h3> : null
+			}
 			{
 				this.props.state.view === 'present' ?
 				<PresentControls

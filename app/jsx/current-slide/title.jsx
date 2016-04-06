@@ -11,6 +11,7 @@ const Title = React.createClass({
 			<input
 				value =	{this.props.state.slides[this.props.state.currentSlide].title}
 				onChange = {this.changeHandler}
+				disabled = {this.props.state.view === 'edit' ? false : true}
 			/>
 		</div>;
 	}

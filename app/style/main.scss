@@ -1,15 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
-
 body {
 	color: #e7e7e7;
 	margin: 0;
 }
-
 .component {
 	display: flex;
 	// border: 1px solid grey;
 }
-
 .header {
 	font-family: 'Poiret One', cursive;
 	font-size: 25px;
@@ -20,55 +17,46 @@ body {
 	flex-direction: column;
 	justify-content: center;
 }
-
 .app {
 	height: 100vh;
 	flex-direction: column;
 	background: #454545;
 }
-
 .edit {
 	height: 90%;
 }
-
 .present {
 	height: 100%;
 	flex-direction: column;
 	align-items: center;
 }
-
 .controls {
 	height: 100%;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	.component {
+		cursor: pointer;
+		height: 6%;
+		width: 25%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 }
-
-.controls .component {
-	cursor: pointer;
-	height: 6%;
-	width: 25%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
 .prev-next {
 	width: 100% !important;
 	height: 6%;
 	cursor: initial !important;
 	justify-content: space-around;
+	> .component {
+		height: 100%;
+		width: 25%;
+	}
 }
-
-.prev-next > .component{
-	height: 100%;
-	width: 25%;
-}
-
 .add-slide {
 	background-image: url('../img/add.png');
 }
-
 .edit-btn {
 	cursor: pointer;
 	height: 75%;
@@ -78,7 +66,6 @@ body {
 	background-size: contain;
 	background-image: url('../img/edit.png');
 }
-
 .next-slide {
 	cursor: pointer;
 	background-position: center;
@@ -86,18 +73,15 @@ body {
 	background-size: contain;
 	background-image: url('../img/next.png');
 }
-
 .present-btn {
 	background-image: url('../img/preview.png');
 }
-
 .present-controls {
 	background-color: #a6a6a6;
 	height: 5%;
 	align-items: center;
 	justify-content: center;
 }
-
 .prev-slide {
 	cursor: pointer;
 	background-position: center;
@@ -105,59 +89,56 @@ body {
 	background-size: contain;
 	background-image: url('../img/back.png');
 }
-
 .remove-slide {
 	background-image: url('../img/remove.png');
 }
-
 .current-slide {
 	height: 100%;
 	flex-direction: column;
 	width: 90%;
 	text-align: center;
 }
-
 .present > .current-slide {
 	width: 100%;
 	color: #5d5c5c;
 }
-
-.text, .pic {
+.text {
 	height: 70%;
 	width: 70%;
 }
-
 .pic {
+	height: 70%;
+	width: 70%;
 	flex-direction: column;
 	align-items: center;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-color: #2b2b2b;
+	> input {
+		margin-top: -4%;
+		width: 50%;
+		height: 6%;
+	}
 }
-
-.pic > input {
-	margin-top: -4%;
-	width: 50%;
-	height: 6%;
-}
-
 .title {
 	height: 10%;
 	width: 70%;
 }
-
-.text > textarea, .title > input {
+.text > textarea {
 	width: 100%;
 	padding: 10px;
 	font-family: 'Arial';
 }
-
 .title > input {
+	width: 100%;
+	padding: 10px;
+	font-family: 'Arial';
 	text-align: center;
 }
-
-.title-text, .title-only, .title-pic {
+.title-only,
+.title-pic,
+.title-text {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
@@ -170,7 +151,6 @@ body {
 	flex-direction: column;
 	background-color: #e3a95c;
 }
-
 .slide-type-chooser {
 	height: 100%;
 	width: 100%;
@@ -178,8 +158,9 @@ body {
 	align-items: center;
 	justify-content: space-around;
 }
-
-.sidebar-title-text, .sidebar-title-pic, .sidebar-title-only {
+.sidebar-title-only,
+.sidebar-title-pic,
+.sidebar-title-text {
 	height: 14%;
 	width: 86%;
 	background-position: center;
@@ -189,51 +170,43 @@ body {
 	border: 1px solid #454545;
 	border-radius: 13px;
 }
-
 .sidebar-title-text {
 	background-image: url('../img/title-text.jpg');
 }
-
 .sidebar-title-pic {
 	background-image: url('../img/title-pic.jpg');
 }
-
 .sidebar-title-only {
 	background-image: url('../img/title-only.jpg');
 }
-
-.present .prev-next {
-	height: 75%;
-	width: 15% !important;
-	margin-left: 2%;
-}
-
-.present .prev-next .component {
-	width: 15%;
-}
-
-.present .edit-btn {
-	width: 2%;
-}
-
-.present .pic input {
-	display: none;
-}
-
-.present .pic {
-	background-color: transparent;
-}
-
-.present .title input {
-	font-size: 30px;
-	color: #e7e7e7;
-	background-color: rgba(#467bc2, 0.67);
-	border: 0px;
-}
-
-.present textarea {
-	color: #e7e7e7;
-	background-color: rgb(58, 58, 58);
-	border: 0px;
-	text-align: center;
+.present {
+	.prev-next {
+		height: 75%;
+		width: 15% !important;
+		margin-left: 2%;
+		.component {
+			width: 15%;
+		}
+	}
+	.edit-btn {
+		width: 2%;
+	}
+	.pic {
+		input {
+			display: none;
+		}
+		background-color: transparent;
+	}
+	.title input {
+		font-size: 30px;
+		color: #e7e7e7;
+		background-color: rgba(#467bc2, 0.67);
+		border: 0;
+	}
+	textarea {
+		color: #e7e7e7;
+		background-color: rgb(58, 58, 58);
+		border: 0;
+		text-align: center;
+	}
 }

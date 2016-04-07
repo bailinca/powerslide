@@ -10,7 +10,10 @@ class PresentBtn extends React.Component<IGenericProps, IGenericState>{
 		});
 	}
 	render() {
-		return <div className = 'component present-btn' onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component present-btn'
+			onClick = {this.clickHandler.bind(this)}
+		>
 		</div>;
 	}
 };

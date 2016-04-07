@@ -17,7 +17,10 @@ class RemoveSlide extends React.Component<IGenericProps, IGenericState>{
 		});
 	}
 	render() {
-		return <div className = 'component remove-slide' onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component remove-slide'
+			onClick = {this.clickHandler.bind(this)}
+		>
 		</div>;
 	}
 };

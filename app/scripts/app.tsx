@@ -53,7 +53,8 @@ import Present from './present';
 			this.updateAppState = this.updateAppState.bind(this);
 		}
 		updateAppState(newState) {
-			this.setState(newState,
+			this.setState(
+				newState,
 				() => localStorage.setItem('state', JSON.stringify(this.state)));
 		}
 		render() {

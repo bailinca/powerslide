@@ -25,15 +25,11 @@ var common = {
 		})
 	],
 
-	eslint: {
-		configFile: '.eslintrc'
-	},
-
 	module: {
 		preLoaders: [
 			{
-				test: [/\.tsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
-				loader: 'ts!eslint',
+				test: [/\.ts?$/, /\.tsx?$/],
+				loader: 'ts!tslint',
 				include: path.resolve(ROOT_PATH, 'app')
 			}
 		],

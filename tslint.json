@@ -1,0 +1,16 @@
+{
+    "rules": {
+        "quotemark": [true, "single"],
+        "class-name": true,
+        "align": [
+            true,
+            "parameters",
+            "arguments",
+            "statements"
+        ],
+        "max-line-length": [
+            true,
+            90
+        ]
+    }
+}

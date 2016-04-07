@@ -2,7 +2,7 @@ import * as React from 'react';
 import EditBtn from './edit-btn.tsx';
 import PrevNext from './prev-next.tsx';
 
-class PresentControls extends React.Component<IGenericProps, IGenericState>{
+class PresentControls extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

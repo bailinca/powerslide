@@ -3,7 +3,7 @@ import TitleText from './title-text.tsx';
 import TitlePic from './title-pic.tsx';
 import TitleOnly from './title-only.tsx';
 
-class CurrentSlide extends React.Component<IGenericProps, IGenericState>{
+class CurrentSlide extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

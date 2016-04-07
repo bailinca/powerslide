@@ -2,7 +2,7 @@ import * as React from 'react';
 import CurrentSlide from './current-slide/current-slide.tsx';
 import Sidebar from './sidebar/sidebar.tsx';
 
-class Edit extends React.Component<IGenericProps, IGenericState>{
+class Edit extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

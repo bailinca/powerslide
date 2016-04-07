@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class SidebarTitleOnly extends React.Component<IGenericProps, IGenericState>{
+class SidebarTitleOnly extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

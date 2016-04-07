@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class EditBtn extends React.Component<IGenericProps, IGenericState>{
+class EditBtn extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

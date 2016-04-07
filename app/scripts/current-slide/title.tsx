@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class Title extends React.Component<IGenericProps, IGenericState>{
+class Title extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

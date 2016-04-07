@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class SidebarTitlePic extends React.Component<IGenericProps, IGenericState>{
+class SidebarTitlePic extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

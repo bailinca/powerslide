@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class PrevSlide extends React.Component<IGenericProps, IGenericState>{
+class PrevSlide extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Title from './title.tsx';
 
-class TitleOnly extends React.Component<IGenericProps, IGenericState>{
+class TitleOnly extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

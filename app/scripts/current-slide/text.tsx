@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class Text extends React.Component<IGenericProps, IGenericState>{
+class Text extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

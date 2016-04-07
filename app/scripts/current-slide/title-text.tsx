@@ -2,7 +2,7 @@ import * as React from 'react';
 import Title from './title.tsx';
 import Text from './text.tsx';
 
-class TitleText extends React.Component<IGenericProps, IGenericState>{
+class TitleText extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

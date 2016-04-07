@@ -44,9 +44,9 @@ import Present from './present';
 		};
 		localStorage.setItem('state', JSON.stringify(state));
 	}
-	const AppElement = document.createElement('div');
-	document.body.appendChild(AppElement);
-	class App extends React.Component<IAppProps, IAppState>{
+	const appElement = document.createElement('div');
+	document.body.appendChild(appElement);
+	class App extends React.Component<IAppProps, IAppState> {
 		constructor(props) {
 			super(props);
 			this.state = state;
@@ -77,5 +77,5 @@ import Present from './present';
 		}
 	}
 
-	render(<App/>, AppElement);
+	render(<App/>, appElement);
 })());

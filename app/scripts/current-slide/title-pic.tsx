@@ -2,7 +2,7 @@ import * as React from 'react';
 import Title from './title.tsx';
 import Pic from './pic.tsx';
 
-class TitlePic extends React.Component<IGenericProps, IGenericState>{
+class TitlePic extends React.Component<IGenericProps, IGenericState> {
 	constructor(props) {
 		super(props);
 	}

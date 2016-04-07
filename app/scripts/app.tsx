@@ -75,7 +75,7 @@ import Present from './present';
 					}
 			</div>;
 		}
-	};
+	}
 
 	render(<App/>, AppElement);
 })());

@@ -97,7 +97,7 @@ declare namespace __React {
     // Top Level API
     // ----------------------------------------------------------------------
 
-    function createClass<IGenericProps, IGenericState><P, S>(spec: ComponentSpec<P, S>): ClassicComponentClass<P>;
+    function createClass<P, S>(spec: ComponentSpec<P, S>): ClassicComponentClass<P>;
 
     function createFactory<P extends DOMAttributes, T extends Element>(
         type: string): DOMFactory<P, T>;

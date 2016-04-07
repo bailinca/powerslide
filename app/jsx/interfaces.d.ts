@@ -1,6 +1,7 @@
 interface IGenericProps {
-  state?: any;
+  state: any;
   updateAppState: (val: any) => void;
+  addSlide?: (val: any) => void;
 }
 
 interface IGenericState {

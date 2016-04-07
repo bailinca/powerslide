@@ -4,7 +4,10 @@ import * as React from 'react';
 import Controls from '../controls/controls.tsx';
 import SlideTypeChooser from './slide-type-chooser.tsx';
 
-const Sidebar = React.createClass<IGenericProps, IGenericState>({
+class Sidebar extends React.Component<IGenericProps, IGenericState> {
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return <div className = 'component sidebar'>
 			{
@@ -20,6 +23,6 @@ const Sidebar = React.createClass<IGenericProps, IGenericState>({
 			}
 		</div>;
 	}
-});
+}
 
 export default Sidebar;

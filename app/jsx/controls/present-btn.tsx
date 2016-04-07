@@ -2,16 +2,19 @@
 
 import * as React from 'react';
 
-const PresentBtn = React.createClass<IGenericProps, IGenericState>({
+class PresentBtn extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	clickHandler() {
 		this.props.updateAppState({
 			'view': 'present'
 		});
-	},
+	}
 	render() {
-		return <div className = 'component present-btn' onClick = {this.clickHandler}>
+		return <div className = 'component present-btn' onClick = {this.clickHandler.bind(this)}>
 		</div>;
 	}
-});
+};
 
 export default PresentBtn;

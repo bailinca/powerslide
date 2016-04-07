@@ -4,7 +4,10 @@ import * as React from 'react';
 import Title from './title.tsx';
 import Pic from './pic.tsx';
 
-const TitlePic = React.createClass<IGenericProps, IGenericState>({
+class TitlePic extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return <div className = 'component title-pic'>
 			<Title
@@ -17,6 +20,6 @@ const TitlePic = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default TitlePic;

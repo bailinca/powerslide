@@ -4,7 +4,10 @@ import * as React from 'react';
 import Title from './title.tsx';
 import Text from './text.tsx';
 
-const TitleText = React.createClass<IGenericProps, IGenericState>({
+class TitleText extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return <div className = 'component title-text'>
 			<Title
@@ -17,6 +20,6 @@ const TitleText = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default TitleText;

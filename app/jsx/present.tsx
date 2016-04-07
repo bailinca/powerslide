@@ -4,7 +4,10 @@ import * as React from 'react';
 import CurrentSlide from './current-slide/current-slide.tsx';
 import PresentControls from './controls/present-controls.tsx';
 
-const Present = React.createClass<IGenericProps, IGenericState>({
+class Present extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return <div className = 'component present'>
 			<CurrentSlide
@@ -17,6 +20,6 @@ const Present = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default Present;

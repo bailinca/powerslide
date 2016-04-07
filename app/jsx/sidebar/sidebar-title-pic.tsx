@@ -2,15 +2,18 @@
 
 import * as React from 'react';
 
-const SidebarTitlePic = React.createClass<IGenericProps, IGenericState>({
+class SidebarTitlePic extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	clickHandler() {
 		this.props.addSlide('titlePic');
-	},
+	}
 	render() {
 		return <div className = 'component sidebar-title-pic'
-			onClick = {this.clickHandler}>
+			onClick = {this.clickHandler.bind(this)}>
 		</div>;
 	}
-});
+};
 
 export default SidebarTitlePic;

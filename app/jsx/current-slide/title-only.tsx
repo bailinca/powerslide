@@ -3,7 +3,10 @@
 import * as React from 'react';
 import Title from './title.tsx';
 
-const TitleOnly = React.createClass<IGenericProps, IGenericState>({
+class TitleOnly extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return <div className = 'component title-only'>
 			<Title
@@ -12,6 +15,6 @@ const TitleOnly = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default TitleOnly;

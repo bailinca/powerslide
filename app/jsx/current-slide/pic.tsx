@@ -2,12 +2,15 @@
 
 import * as React from 'react';
 
-const Pic = React.createClass<IGenericProps, IGenericState>({
+class Pic extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	changeHandler(e) {
 		let slides = this.props.state.slides;
 		slides[this.props.state.currentSlide].url = e.target.value;
 		this.props.updateAppState({slides});
-	},
+	}
 	render() {
 		const url = this.props.state.slides[this.props.state.currentSlide].url;
 		return <div
@@ -21,6 +24,6 @@ const Pic = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default Pic;

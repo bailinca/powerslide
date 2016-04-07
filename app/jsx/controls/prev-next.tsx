@@ -4,7 +4,10 @@ import * as React from 'react';
 import PrevSlide from './prev-slide.tsx';
 import NextSlide from './next-slide.tsx';
 
-const PrevNext = React.createClass<IGenericProps, IGenericState>({
+class PrevNext extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return <div className = 'component prev-next'>
 			<PrevSlide
@@ -17,6 +20,6 @@ const PrevNext = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default PrevNext;

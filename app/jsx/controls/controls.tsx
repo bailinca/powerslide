@@ -6,7 +6,10 @@ import AddSlide from './add-slide.tsx';
 import RemoveSlide from './remove-slide.tsx';
 import PrevNext from './prev-next.tsx';
 
-const Controls = React.createClass<IGenericProps, IGenericState>({
+class Controls extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return <div className = 'component controls'>
 			<PresentBtn
@@ -27,6 +30,6 @@ const Controls = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default Controls;

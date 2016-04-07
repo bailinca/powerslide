@@ -1,6 +1,6 @@
-import '../style/main.scss';
 /// <reference path="./interfaces.d.ts"/>
 
+import '../style/main.scss';
 import * as React from 'react';
 import {render} from 'react-dom';
 import Header from './header';
@@ -45,14 +45,16 @@ import Present from './present';
 	}
 	const AppElement = document.createElement('div');
 	document.body.appendChild(AppElement);
-	const App = React.createClass<IAppProps, IAppState>({
-		getInitialState() {
-			return state;
-		},
+	class App extends React.Component<IAppProps, IAppState>{
+		constructor(props) {
+			super(props);
+			this.state = state;
+			this.updateAppState = this.updateAppState.bind(this);
+		}
 		updateAppState(newState) {
 			this.setState(newState,
 				() => localStorage.setItem('state', JSON.stringify(this.state)));
-		},
+		}
 		render() {
 			return <div className = 'component app'>
 				{
@@ -71,7 +73,7 @@ import Present from './present';
 					}
 			</div>;
 		}
-	});
+	};
 
 	render(<App/>, AppElement);
 })());

@@ -2,15 +2,18 @@
 
 import * as React from 'react';
 
-const SidebarTitleOnly = React.createClass<IGenericProps, IGenericState>({
+class SidebarTitleOnly extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	clickHandler() {
 		this.props.addSlide('titleOnly');
-	},
+	}
 	render() {
 		return <div className = 'component sidebar-title-only'
-			onClick = {this.clickHandler}>
+			onClick = {this.clickHandler.bind(this)}>
 		</div>;
 	}
-});
+};
 
 export default SidebarTitleOnly;

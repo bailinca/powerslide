@@ -2,7 +2,10 @@
 
 import * as React from 'react';
 
-const RemoveSlide = React.createClass<IGenericProps, IGenericState>({
+class RemoveSlide extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	clickHandler() {
 		let slides = this.props.state.slides;
 		if (slides.length === 1) {
@@ -14,11 +17,11 @@ const RemoveSlide = React.createClass<IGenericProps, IGenericState>({
 			'currentSlide': slides.length === this.props.state.currentSlide ?
 				(this.props.state.currentSlide - 1) : this.props.state.currentSlide
 		});
-	},
+	}
 	render() {
-		return <div className = 'component remove-slide' onClick = {this.clickHandler}>
+		return <div className = 'component remove-slide' onClick = {this.clickHandler.bind(this)}>
 		</div>;
 	}
-});
+};
 
 export default RemoveSlide;

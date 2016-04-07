@@ -2,12 +2,15 @@
 
 import * as React from 'react';
 
-const Text = React.createClass<IGenericProps, IGenericState>({
+class Text extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	changeHandler(e) {
 		let slides = this.props.state.slides;
 		slides[this.props.state.currentSlide].text = e.target.value;
 		this.props.updateAppState(slides);
-	},
+	}
 	render() {
 		return <div className = 'component text'>
 			<textarea
@@ -17,6 +20,6 @@ const Text = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default Text;

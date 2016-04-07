@@ -4,7 +4,11 @@ import * as React from 'react';
 import CurrentSlide from './current-slide/current-slide.tsx';
 import Sidebar from './sidebar/sidebar.tsx';
 
-const Edit = React.createClass<IGenericProps, IGenericState>({
+class Edit extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		console.log(props);
+		super(props);
+	}
 	render() {
 		return <div className = 'component edit'>
 			<CurrentSlide
@@ -17,6 +21,6 @@ const Edit = React.createClass<IGenericProps, IGenericState>({
 			/>
 		</div>;
 	}
-});
+};
 
 export default Edit;

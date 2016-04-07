@@ -2,17 +2,20 @@
 
 import * as React from 'react';
 
-const PrevSlide = React.createClass<IGenericProps, IGenericState>({
+class PrevSlide extends React.Component<IGenericProps, IGenericState>{
+	constructor(props) {
+		super(props);
+	}
 	clickHandler() {
 		let currentSlide = this.props.state.currentSlide - 1;
 		if (currentSlide >= 0) {
 			this.props.updateAppState({currentSlide});
 		}
-	},
+	}
 	render() {
-		return <div className = 'component prev-slide' onClick = {this.clickHandler}>
+		return <div className = 'component prev-slide' onClick = {this.clickHandler.bind(this)}>
 		</div>;
 	}
-});
+};
 
 export default PrevSlide;

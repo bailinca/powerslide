@@ -1,5 +1,3 @@
-/// <reference path="../interfaces.d.ts"/>
-
 import * as React from 'react';
 import PresentBtn from './present-btn.tsx';
 import AddSlide from './add-slide.tsx';

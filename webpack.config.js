@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var common = {
 
-	entry: [path.resolve(ROOT_PATH, 'app/jsx/app.tsx')],
+	entry: [path.resolve(ROOT_PATH, 'app/scripts/app.tsx')],
 
 	resolve: {
 		extensions: ['', '.js', '.tsx', '.tsx', '.ts']

@@ -1,20 +1,18 @@
-/// <reference path="../interfaces.d.ts"/>
-
 import * as React from 'react';
-import Title from './title.tsx';
-import Text from './text.tsx';
+import CurrentSlide from './current-slide/current-slide.tsx';
+import Sidebar from './sidebar/sidebar.tsx';
 
-class TitleText extends React.Component<IGenericProps, IGenericState>{
+class Edit extends React.Component<IGenericProps, IGenericState>{
 	constructor(props) {
 		super(props);
 	}
 	render() {
-		return <div className = 'component title-text'>
-			<Title
+		return <div className = 'component edit'>
+			<CurrentSlide
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>
-			<Text
+			<Sidebar
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>
@@ -22,4 +20,4 @@ class TitleText extends React.Component<IGenericProps, IGenericState>{
 	}
 };
 
-export default TitleText;
+export default Edit;

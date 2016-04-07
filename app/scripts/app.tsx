@@ -1,3 +1,4 @@
+/// <reference path="../../typings/main.d.ts"/>
 /// <reference path="./interfaces.d.ts"/>
 
 import '../style/main.scss';

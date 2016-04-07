@@ -1,5 +1,3 @@
-/// <reference path="../interfaces.d.ts"/>
-
 import * as React from 'react';
 import EditBtn from './edit-btn.tsx';
 import PrevNext from './prev-next.tsx';

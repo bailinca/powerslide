@@ -1,5 +1,3 @@
-/// <reference path="../interfaces.d.ts"/>
-
 import * as React from 'react';
 import SidebarTitleText from './sidebar-title-text.tsx';
 import SidebarTitlePic from './sidebar-title-pic.tsx';

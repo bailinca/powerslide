@@ -1,20 +1,18 @@
-/// <reference path="../interfaces.d.ts"/>
-
 import * as React from 'react';
 import Title from './title.tsx';
-import Pic from './pic.tsx';
+import Text from './text.tsx';
 
-class TitlePic extends React.Component<IGenericProps, IGenericState>{
+class TitleText extends React.Component<IGenericProps, IGenericState>{
 	constructor(props) {
 		super(props);
 	}
 	render() {
-		return <div className = 'component title-pic'>
+		return <div className = 'component title-text'>
 			<Title
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>
-			<Pic
+			<Text
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
 			/>
@@ -22,4 +20,4 @@ class TitlePic extends React.Component<IGenericProps, IGenericState>{
 	}
 };
 
-export default TitlePic;
+export default TitleText;

@@ -6,7 +6,8 @@
 	},
 	"exclude": [
 		"node_modules",
-		"build"
+		"build",
+		"typings"
 	],
 	"compileOnSave": false
 }

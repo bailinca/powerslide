@@ -1,5 +1,3 @@
-/// <reference path="../interfaces.d.ts"/>
-
 import * as React from 'react';
 import TitleText from './title-text.tsx';
 import TitlePic from './title-pic.tsx';

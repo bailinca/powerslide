@@ -6,7 +6,6 @@ import Sidebar from './sidebar/sidebar.tsx';
 
 class Edit extends React.Component<IGenericProps, IGenericState>{
 	constructor(props) {
-		console.log(props);
 		super(props);
 	}
 	render() {

@@ -1,16 +1,12 @@
 {
-    "rules": {
-        "quotemark": [true, "single"],
-        "class-name": true,
-        "align": [
-            true,
-            "parameters",
-            "arguments",
-            "statements"
-        ],
-        "max-line-length": [
-            true,
-            90
-        ]
-    }
+	"rules": {
+		"quotemark": [true, "single"],
+		"class-name": true,
+		"align": [true, "parameters", "arguments", "statements"],
+		"max-line-length": [true, 90],
+		"comment-format": [true, "check-space"],
+		"curly": true,
+		"eofline": true,
+		"indent": [true, "tabs"]
+	}
 }

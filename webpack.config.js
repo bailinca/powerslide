@@ -6,10 +6,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var common = {
 
-	entry: [path.resolve(ROOT_PATH, 'app/jsx/app.jsx')],
+	entry: [path.resolve(ROOT_PATH, 'app/jsx/app.tsx')],
 
 	resolve: {
-		extensions: ['', '.js', '.jsx']
+		extensions: ['', '.js', '.tsx', '.tsx', '.ts']
 	},
 
 	output: {
@@ -32,19 +32,19 @@ var common = {
 	module: {
 		preLoaders: [
 			{
-				test: [/\.jsx?$/, /\.js?$/],
-				loaders: ['eslint'],
+				test: [/\.tsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
+				loaders: ['ts'],
 				include: path.resolve(ROOT_PATH, 'app')
 			}
 		],
 		loaders: [
 			{
-				test: /\.jsx?$/,
+				test: [/\.tsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
 				loaders: ['react-hot', 'babel'],
 				include: path.resolve(ROOT_PATH, 'app')
 			},
 			{
-				test: [/\.png?$/, /\.jpg?$/],
+				test: [/\.png?$/, /\.jpg?$/, /\.bmp?$/],
 				loaders: ['file']
 			},
 			{

@@ -7,6 +7,23 @@
 		"comment-format": [true, "check-space"],
 		"curly": true,
 		"eofline": true,
-		"indent": [true, "tabs"]
+		"indent": [true, "tabs"],
+		"interface-name": [true, "always-prefix"],
+		"no-angle-bracket-type-assertion": true,
+		"no-any": true,
+		"no-bitwise": true,
+		"no-conditional-assignment": true,
+		"no-duplicate-key": true,
+		"no-duplicate-variable": true,
+		"no-empty": true,
+		"no-internal-module": true,
+		"no-require-imports": true,
+		"no-shadowed-variable": true,
+		"no-string-literal": true,
+		"no-switch-case-fall-through": true,
+		"no-trailing-whitespace": true,
+		"no-unreachable": true,
+		"no-unused-expression": true,
+		"no-unused-variable": true
 	}
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class Header extends React.Component<any, any>{
+class Header extends React.Component<{}, {}>{
 	constructor(props) {
 		super(props);
 	}

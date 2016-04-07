@@ -17,7 +17,7 @@ class Pic extends React.Component<IGenericProps, IGenericState>{
 			>
 			<input
 				value =	{this.props.state.slides[this.props.state.currentSlide].url}
-				onChange = {this.changeHandler}
+				onChange = {this.changeHandler.bind(this)}
 				placeholder = {'...Image url'}
 			/>
 		</div>;

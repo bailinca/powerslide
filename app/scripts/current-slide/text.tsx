@@ -13,7 +13,7 @@ class Text extends React.Component<IGenericProps, IGenericState>{
 		return <div className = 'component text'>
 			<textarea
 				value =	{this.props.state.slides[this.props.state.currentSlide].text}
-				onChange = {this.changeHandler}
+				onChange = {this.changeHandler.bind(this)}
 				disabled = {this.props.state.view === 'edit' ? false : true}
 			/>
 		</div>;

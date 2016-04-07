@@ -13,7 +13,7 @@ class Title extends React.Component<IGenericProps, IGenericState>{
 		return <div className = 'component title'>
 			<input
 				value =	{this.props.state.slides[this.props.state.currentSlide].title}
-				onChange = {this.changeHandler}
+				onChange = {this.changeHandler.bind(this)}
 				disabled = {this.props.state.view === 'edit' ? false : true}
 			/>
 		</div>;

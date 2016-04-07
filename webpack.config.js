@@ -33,7 +33,7 @@ var common = {
 		preLoaders: [
 			{
 				test: [/\.tsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
-				loaders: ['ts'],
+				loader: 'ts!eslint',
 				include: path.resolve(ROOT_PATH, 'app')
 			}
 		],

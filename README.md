@@ -1,6 +1,8 @@
-# Powerslide
+# Powerslide (TypeScript + React + ES6 + ES6 modules + webpack + SASS + TSLint)
 
 ```
-npm i
-npm start
+Commands:
+	npm i
+	npm run build
+	npm start
 ```

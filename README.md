@@ -3,7 +3,8 @@ Technologies used: TypeScript, React, JSX, ES6, ES6 modules, Babel, webpack, SAS
 
 ```
 Commands:
-	npm i
-	npm run build
-	npm start
+
+npm i
+npm run build
+npm start
 ```

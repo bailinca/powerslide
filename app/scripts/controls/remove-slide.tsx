@@ -2,7 +2,7 @@ import * as React from 'react';
 
 class RemoveSlide extends React.Component<IGenericProps, IGenericState> {
 	clickHandler(): void {
-		let slides: any = this.props.state.slides;
+		let slides: ISlide[] = this.props.state.slides;
 		if (slides.length === 1) {
 			return;
 		}

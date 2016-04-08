@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 class Pic extends React.Component<IGenericProps, IGenericState> {
-	changeHandler(e: any): void {
-		let slides: any = this.props.state.slides;
-		slides[this.props.state.currentSlide].url = e.target.value;
+	changeHandler(e: React.SyntheticEvent): void {
+		let slides: ISlide[] = this.props.state.slides;
+		slides[this.props.state.currentSlide].url = (e.target as HTMLInputElement).value;
 		this.props.updateAppState({slides});
 	}
 	render(): React.ReactElement<HTMLDivElement> {

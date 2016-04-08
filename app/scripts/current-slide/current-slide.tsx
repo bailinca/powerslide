@@ -4,8 +4,8 @@ import TitlePic from './title-pic.tsx';
 import TitleOnly from './title-only.tsx';
 
 class CurrentSlide extends React.Component<IGenericProps, IGenericState> {
-	render() {
-		const type = this.props.state.slides[this.props.state.currentSlide].type;
+	render(): React.ReactElement<HTMLDivElement> {
+		const type: string = this.props.state.slides[this.props.state.currentSlide].type;
 		return <div className = 'component current-slide'>
 			{
 				type === 'titleText' ?

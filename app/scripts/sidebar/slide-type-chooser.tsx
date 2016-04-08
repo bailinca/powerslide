@@ -4,20 +4,20 @@ import SidebarTitlePic from './sidebar-title-pic.tsx';
 import SidebarTitleOnly from './sidebar-title-only.tsx';
 
 class SlideTypeChooser extends React.Component<IGenericProps, IGenericState> {
-	clickHandler() {
+	clickHandler(): void {
 		this.props.updateAppState({
 			'sidebar': 'controls'
 		});
 	}
-	addSlide(type) {
-		let slides = this.props.state.slides;
+	addSlide(type: string): void {
+		let slides: {}[] = this.props.state.slides;
 		slides.splice(this.props.state.currentSlide + 1, null, {type});
 		this.props.updateAppState({
 			slides,
 			'currentSlide': this.props.state.currentSlide + 1
 		});
 	}
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component slide-type-chooser'
 			onClick = {this.clickHandler.bind(this)}>
 

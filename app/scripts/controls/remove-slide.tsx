@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 class RemoveSlide extends React.Component<IGenericProps, IGenericState> {
-	clickHandler() {
-		let slides = this.props.state.slides;
+	clickHandler(): void {
+		let slides: any = this.props.state.slides;
 		if (slides.length === 1) {
 			return;
 		}
@@ -13,7 +13,7 @@ class RemoveSlide extends React.Component<IGenericProps, IGenericState> {
 				(this.props.state.currentSlide - 1) : this.props.state.currentSlide
 		});
 	}
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div
 			className = 'component remove-slide'
 			onClick = {this.clickHandler.bind(this)}

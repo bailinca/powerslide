@@ -3,7 +3,7 @@ import PrevSlide from './prev-slide.tsx';
 import NextSlide from './next-slide.tsx';
 
 class PrevNext extends React.Component<IGenericProps, IGenericState> {
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component prev-next'>
 			<PrevSlide
 				state = {this.props.state}

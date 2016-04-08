@@ -3,7 +3,7 @@ import Controls from '../controls/controls.tsx';
 import SlideTypeChooser from './slide-type-chooser.tsx';
 
 class Sidebar extends React.Component<IGenericProps, IGenericState> {
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component sidebar'>
 			{
 				this.props.state.sidebar === 'controls' ?

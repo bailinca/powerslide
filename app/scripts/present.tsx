@@ -3,7 +3,7 @@ import CurrentSlide from './current-slide/current-slide.tsx';
 import PresentControls from './controls/present-controls.tsx';
 
 class Present extends React.Component<IGenericProps, IGenericState> {
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component present'>
 			<CurrentSlide
 				state = {this.props.state}

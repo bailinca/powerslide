@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 class Text extends React.Component<IGenericProps, IGenericState> {
-	changeHandler(e) {
-		let slides = this.props.state.slides;
+	changeHandler(e: any): void {
+		let slides: any = this.props.state.slides;
 		slides[this.props.state.currentSlide].text = e.target.value;
 		this.props.updateAppState(slides);
 	}
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component text'>
 			<textarea
 				value =	{this.props.state.slides[this.props.state.currentSlide].text}

@@ -3,7 +3,7 @@ import EditBtn from './edit-btn.tsx';
 import PrevNext from './prev-next.tsx';
 
 class PresentControls extends React.Component<IGenericProps, IGenericState> {
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component present-controls'>
 			{this.props.state.currentSlide + 1 + ' / ' + this.props.state.slides.length}
 			<PrevNext

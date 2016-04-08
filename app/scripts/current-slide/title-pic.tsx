@@ -3,7 +3,7 @@ import Title from './title.tsx';
 import Pic from './pic.tsx';
 
 class TitlePic extends React.Component<IGenericProps, IGenericState> {
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component title-pic'>
 			<Title
 				state = {this.props.state}

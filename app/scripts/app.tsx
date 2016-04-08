@@ -8,8 +8,8 @@ import Header from './header';
 import Edit from './edit';
 import Present from './present';
 
-((function() {
-	let state = JSON.parse(localStorage.getItem('state'));
+((function(): void {
+	let state: IAppState = JSON.parse(localStorage.getItem('state'));
 	if (!state) {
 		state = {
 			'view': 'edit',
@@ -44,20 +44,20 @@ import Present from './present';
 		};
 		localStorage.setItem('state', JSON.stringify(state));
 	}
-	const appElement = document.createElement('div');
+	const appElement: Element = document.createElement('div');
 	document.body.appendChild(appElement);
 	class App extends React.Component<IAppProps, IAppState> {
-		constructor(props) {
+		constructor(props: IAppProps) {
 			super(props);
 			this.state = state;
 			this.updateAppState = this.updateAppState.bind(this);
 		}
-		updateAppState(newState) {
+		updateAppState(newState: IAppState): void {
 			this.setState(
 				newState,
 				() => localStorage.setItem('state', JSON.stringify(this.state)));
 		}
-		render() {
+		render(): React.ReactElement<HTMLDivElement> {
 			return <div className = 'component app'>
 				{
 					this.state.view === 'edit' ? <Header /> : null

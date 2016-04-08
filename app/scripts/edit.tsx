@@ -3,7 +3,7 @@ import CurrentSlide from './current-slide/current-slide.tsx';
 import Sidebar from './sidebar/sidebar.tsx';
 
 class Edit extends React.Component<IGenericProps, IGenericState> {
-	render() {
+	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component edit'>
 			<CurrentSlide
 				state = {this.props.state}

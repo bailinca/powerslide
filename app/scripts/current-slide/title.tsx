@@ -1,9 +1,6 @@
 import * as React from 'react';
 
 class Title extends React.Component<IGenericProps, IGenericState> {
-	constructor(props) {
-		super(props);
-	}
 	changeHandler(e) {
 		let slides = this.props.state.slides;
 		slides[this.props.state.currentSlide].title = e.target.value;

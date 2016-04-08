@@ -4,9 +4,6 @@ import TitlePic from './title-pic.tsx';
 import TitleOnly from './title-only.tsx';
 
 class CurrentSlide extends React.Component<IGenericProps, IGenericState> {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		const type = this.props.state.slides[this.props.state.currentSlide].type;
 		return <div className = 'component current-slide'>

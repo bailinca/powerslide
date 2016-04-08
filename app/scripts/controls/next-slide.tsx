@@ -1,9 +1,6 @@
 import * as React from 'react';
 
 class NextSlide extends React.Component<IGenericProps, IGenericState> {
-	constructor(props) {
-		super(props);
-	}
 	clickHandler() {
 		let currentSlide = this.props.state.currentSlide + 1;
 		if (currentSlide < this.props.state.slides.length) {

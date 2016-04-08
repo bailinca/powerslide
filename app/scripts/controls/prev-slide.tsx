@@ -1,9 +1,6 @@
 import * as React from 'react';
 
 class PrevSlide extends React.Component<IGenericProps, IGenericState> {
-	constructor(props) {
-		super(props);
-	}
 	clickHandler() {
 		let currentSlide = this.props.state.currentSlide - 1;
 		if (currentSlide >= 0) {

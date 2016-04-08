@@ -1,17 +1,17 @@
 interface IGenericProps {
-  state: any;
-  updateAppState: (val: any) => void;
-  addSlide?: (val: any) => void;
+	state: any;
+	updateAppState: (val: any) => void;
+	addSlide?: (val: string) => void;
 }
 
 interface IGenericState {
 }
 
 interface IAppState {
-  view: any;
-  currentSlide:  any;
-  sidebar:  any;
-  slides: any;
+	view: string;
+	currentSlide:  number;
+	sidebar:  string;
+	slides: any;
 }
 
 interface IAppProps {

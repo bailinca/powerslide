@@ -3,9 +3,6 @@ import Controls from '../controls/controls.tsx';
 import SlideTypeChooser from './slide-type-chooser.tsx';
 
 class Sidebar extends React.Component<IGenericProps, IGenericState> {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		return <div className = 'component sidebar'>
 			{

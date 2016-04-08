@@ -1,9 +1,6 @@
 import * as React from 'react';
 
 class SidebarTitleText extends React.Component<IGenericProps, IGenericState> {
-	constructor(props) {
-		super(props);
-	}
 	clickHandler() {
 		this.props.addSlide('titleText');
 	}

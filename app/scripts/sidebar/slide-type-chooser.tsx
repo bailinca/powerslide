@@ -24,17 +24,17 @@ class SlideTypeChooser extends React.Component<IGenericProps, IGenericState> {
 			<SidebarTitleText
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
-				addSlide = {this.addSlide}
+				addSlide = {this.addSlide.bind(this)}
 			/>
 			<SidebarTitlePic
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
-				addSlide = {this.addSlide}
+				addSlide = {this.addSlide.bind(this)}
 			/>
 			<SidebarTitleOnly
 				state = {this.props.state}
 				updateAppState = {this.props.updateAppState}
-				addSlide = {this.addSlide}
+				addSlide = {this.addSlide.bind(this)}
 			/>
 		</div>;
 	}

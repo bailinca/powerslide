@@ -25,7 +25,7 @@
 	},
 	"scripts": {
 		"build": "webpack",
-		"start": "webpack-dev-server --progress --colors --hot --inline --history-api-fallback"
+		"start": "webpack-dev-server --progress --colors --hot --inline"
 	},
 	"repository": {
 		"type": "git",

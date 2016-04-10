@@ -7,4 +7,5 @@ Commands:
 npm i
 npm run build
 npm start
+Open http://localhost:8080/
 ```

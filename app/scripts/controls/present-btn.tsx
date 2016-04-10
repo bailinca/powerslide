@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class PresentBtn extends React.Component<IGenericProps, IGenericState> {
+class PresentBtn extends React.Component<IGenericProps, {}> {
 	clickHandler(): void {
 		this.props.updateAppState({
 			'view': 'present'

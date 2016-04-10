@@ -46,8 +46,8 @@ import Present from './present';
 	}
 	const appElement: Element = document.createElement('div');
 	document.body.appendChild(appElement);
-	class App extends React.Component<IAppProps, IAppState> {
-		constructor(props: IAppProps) {
+	class App extends React.Component<{}, IAppState> {
+		constructor(props: {}) {
 			super(props);
 			this.state = state;
 			this.updateAppState = this.updateAppState.bind(this);

@@ -4,7 +4,7 @@ import AddSlide from './add-slide.tsx';
 import RemoveSlide from './remove-slide.tsx';
 import PrevNext from './prev-next.tsx';
 
-class Controls extends React.Component<IGenericProps, IGenericState> {
+class Controls extends React.Component<IGenericProps, {}> {
 	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component controls'>
 			<PresentBtn

@@ -3,7 +3,7 @@ import SidebarTitleText from './sidebar-title-text.tsx';
 import SidebarTitlePic from './sidebar-title-pic.tsx';
 import SidebarTitleOnly from './sidebar-title-only.tsx';
 
-class SlideTypeChooser extends React.Component<IGenericProps, IGenericState> {
+class SlideTypeChooser extends React.Component<IGenericProps, {}> {
 	clickHandler(): void {
 		this.props.updateAppState({
 			'sidebar': 'controls'

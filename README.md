@@ -7,5 +7,5 @@ Commands:
 npm i
 npm run build
 npm start
-Open [http://localhost:8080/](http://localhost:8080/)
 ```
+After running 'npm start', open [http://localhost:8080/](http://localhost:8080/) to see the application in action.

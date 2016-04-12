@@ -1,9 +1,3 @@
-interface IGenericProps {
-	state: IAppState;
-	updateAppState: (val: IAppState) => void;
-	addSlide?: (val: string) => void;
-}
-
 interface ISlide {
 	type: string;
 	title?: string;
@@ -16,4 +10,10 @@ interface IAppState {
 	currentSlide?:  number;
 	sidebar?:  string;
 	slides?: ISlide[];
+}
+
+interface IGenericProps {
+	state: IAppState;
+	updateAppState: (val: IAppState) => void;
+	addSlide?: (val: string) => void;
 }

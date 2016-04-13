@@ -6,6 +6,7 @@ pids
 *.pid
 *.seed
 
+typings
 node_modules
 build
 bin/*

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 class RemoveSlide extends React.Component<IGenericProps, {}> {
+
 	clickHandler(): void {
 		let slides: ISlide[] = this.props.state.slides;
 		if (slides.length === 1) {
@@ -13,6 +14,7 @@ class RemoveSlide extends React.Component<IGenericProps, {}> {
 				(this.props.state.currentSlide - 1) : this.props.state.currentSlide
 		});
 	}
+
 	render(): React.ReactElement<HTMLDivElement> {
 		return <div
 			className = 'component remove-slide'

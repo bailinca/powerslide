@@ -5,11 +5,13 @@ import SidebarTitlePic from './sidebar-title-pic.tsx';
 import SidebarTitleOnly from './sidebar-title-only.tsx';
 
 class SlideTypeChooser extends React.Component<IGenericProps, {}> {
+
 	clickHandler(): void {
 		this.props.updateAppState({
 			'sidebar': 'controls'
 		});
 	}
+
 	addSlide(slide: ISlide): void {
 		let slides: ISlide[] = this.props.state.slides;
 		slides.splice(this.props.state.currentSlide + 1, null, slide);
@@ -18,6 +20,7 @@ class SlideTypeChooser extends React.Component<IGenericProps, {}> {
 			'currentSlide': this.props.state.currentSlide + 1
 		});
 	}
+
 	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component slide-type-chooser'
 			onClick = {this.clickHandler.bind(this)}>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 class SidebarTitleText extends React.Component<IGenericProps, {}> {
+
 	clickHandler(): void {
 		this.props.addSlide({
 			'type': 'titleText',
@@ -8,6 +9,7 @@ class SidebarTitleText extends React.Component<IGenericProps, {}> {
 			'text': ''
 		});
 	}
+
 	render(): React.ReactElement<HTMLDivElement> {
 		return <div className = 'component sidebar-title-text'
 			onClick = {this.clickHandler.bind(this)}>

@@ -12,24 +12,29 @@ import Present from './present';
 import {defaultState} from './defaultState.ts';
 
 ((function(): void {
+	const appElement: Element = document.createElement('div');
+	document.body.appendChild(appElement);
+
 	let state: IAppState = JSON.parse(localStorage.getItem('state'));
 	if (!state) {
 		state = defaultState;
 		localStorage.setItem('state', JSON.stringify(state));
 	}
-	const appElement: Element = document.createElement('div');
-	document.body.appendChild(appElement);
+
 	class App extends React.Component<{}, IAppState> {
+
 		constructor(props: {}) {
 			super(props);
 			this.state = state;
 			this.updateAppState = this.updateAppState.bind(this);
 		}
+
 		updateAppState(newState: IAppState): void {
 			this.setState(
 				newState,
 				() => localStorage.setItem('state', JSON.stringify(this.state)));
 		}
+
 		render(): React.ReactElement<HTMLDivElement> {
 			return <div className = 'component app'>
 				{

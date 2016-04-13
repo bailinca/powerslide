@@ -14,7 +14,7 @@ npm run build
 ```
 
 ## Run
-This starts webpack-dev-server on http://localhost:8080/ with [Hot Module Replacement (HMR)](https://webpack.github.io/docs/hot-module-replacement.html) enabled.
+This starts webpack-dev-server on [http://localhost:8080/](http://localhost:8080/) with [Hot Module Replacement (HMR)](https://webpack.github.io/docs/hot-module-replacement.html) enabled.
 ```
 npm start
 ```

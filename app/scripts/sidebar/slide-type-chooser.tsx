@@ -9,9 +9,9 @@ class SlideTypeChooser extends React.Component<IGenericProps, {}> {
 			'sidebar': 'controls'
 		});
 	}
-	addSlide(type: string): void {
+	addSlide(slide: ISlide): void {
 		let slides: ISlide[] = this.props.state.slides;
-		slides.splice(this.props.state.currentSlide + 1, null, {type});
+		slides.splice(this.props.state.currentSlide + 1, null, slide);
 		this.props.updateAppState({
 			slides,
 			'currentSlide': this.props.state.currentSlide + 1

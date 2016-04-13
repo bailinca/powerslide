@@ -1,6 +1,6 @@
 interface ISlide {
 	type: string;
-	title?: string;
+	title: string;
 	text?: string;
 	url?: string;
 }
@@ -15,5 +15,5 @@ interface IAppState {
 interface IGenericProps {
 	state: IAppState;
 	updateAppState: (val: IAppState) => void;
-	addSlide?: (val: string) => void;
+	addSlide?: (val: ISlide) => void;
 }

@@ -37,7 +37,7 @@
 	"scripts": {
 		"build": "webpack",
 		"start": "webpack-dev-server --progress --colors --hot --inline",
-		"test": "karma start karma.conf.js",
+		"test": "karma start karma.conf.js --log-level warn",
 		"test-debug": "karma start karma.conf.js --single-run=false --debug --auto-watch"
 	},
 	"repository": {

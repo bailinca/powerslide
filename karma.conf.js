@@ -3,7 +3,7 @@ var WebpackConfig = require('webpack-config');
 
 module.exports = function (config) {
 	config.set({
-		logLevel: config.LOG_DEBUG,
+		logLevel: config.LOG_WARN,
 		port: 3334,
 		browsers: ['PhantomJS'],
 		singleRun: true,

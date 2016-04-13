@@ -22,5 +22,5 @@ npm start
 ## Test
 ```
 npm test - single run unit tests in PhantomJS
-npm run test-debug - to run repeated unit tests in PhantomJS after every file change
+npm run test-debug - repeated unit tests in PhantomJS on every file change
 ```

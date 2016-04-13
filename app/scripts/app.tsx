@@ -7,7 +7,7 @@ import {render} from 'react-dom';
 import Header from './header';
 import Edit from './edit';
 import Present from './present';
-import * as defaultState from './defaultState.ts';
+import {defaultState} from './defaultState.ts';
 
 ((function(): void {
 	let state: IAppState = JSON.parse(localStorage.getItem('state'));

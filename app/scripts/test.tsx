@@ -5,7 +5,7 @@ import * as React from 'react';
 import {expect} from 'chai';
 import * as TestUtils  from 'react-addons-test-utils';
 import Text from './current-slide/text';
-import * as defaultState from './defaultState.ts';
+import {defaultState} from './defaultState.ts';
 
 describe('Text Component', () => {
 	it('has correct type', () => {

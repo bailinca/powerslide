@@ -1,4 +1,4 @@
-export default {
+const defaultState: IAppState = {
 	'view': 'edit',
 	'currentSlide': 0,
 	'sidebar': 'controls',
@@ -28,4 +28,6 @@ export default {
 			'title': 'Slide 6'
 		}
 	]
-}
+};
+
+export {defaultState};

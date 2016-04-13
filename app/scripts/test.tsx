@@ -2,6 +2,7 @@
 /// <reference path="./interfaces.d.ts"/>
 
 import * as React from 'react';
+import {expect} from 'chai';
 import * as TestUtils  from 'react-addons-test-utils';
 import Text from './current-slide/text';
 import * as defaultState from './defaultState.ts';
@@ -13,7 +14,7 @@ describe('Text Component', () => {
 				state = {defaultState}
 				updateAppState = {() => 0}
 			/>,
-			Text)).toBe(true);
+			Text)).to.equal(true);
 	});
 });
 
@@ -30,6 +31,6 @@ describe('Text Component tree', () => {
 				component as React.Component<IGenericProps, {}>,
 				(c: React.Component<{}, {}> | Element) => true
 		);
-		expect(allDivs.length).toBe(3);
+		expect(allDivs.length).to.equal(3);
 	});
 });

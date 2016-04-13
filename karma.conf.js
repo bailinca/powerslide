@@ -7,7 +7,7 @@ module.exports = function (config) {
 		port: 3334,
 		browsers: ['PhantomJS'],
 		singleRun: true,
-		frameworks: ['jasmine'],
+		frameworks: ['mocha', 'chai'],
 		files: [
 			'karma.tests.js'
 		],

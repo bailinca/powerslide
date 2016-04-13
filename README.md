@@ -1,5 +1,5 @@
 # Powerslide (simple presentation/slides application)
-Technologies used: TypeScript, React, JSX, ES6, ES6 modules, Babel, webpack, SASS, TSLint
+Technologies used: TypeScript, React, JSX, ES6, ES6 modules, Babel, webpack, SASS, TSLint, Karma, Mocha, Chai
 
 ```
 Commands:

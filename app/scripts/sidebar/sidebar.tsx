@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import Controls from '../controls/controls.tsx';
 import SlideTypeChooser from './slide-type-chooser.tsx';
 

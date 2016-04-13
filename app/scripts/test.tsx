@@ -4,6 +4,7 @@
 import * as React from 'react';
 import {expect} from 'chai';
 import * as TestUtils  from 'react-addons-test-utils';
+
 import Text from './current-slide/text';
 import {defaultState} from './defaultState.ts';
 

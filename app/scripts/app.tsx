@@ -2,8 +2,10 @@
 /// <reference path="./interfaces.d.ts"/>
 
 import '../style/main.scss';
+
 import * as React from 'react';
 import {render} from 'react-dom';
+
 import Header from './header';
 import Edit from './edit';
 import Present from './present';

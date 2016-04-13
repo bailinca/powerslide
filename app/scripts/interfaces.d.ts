@@ -1,14 +1,14 @@
 interface ISlide {
-	type: string;
+	type: 'titleText' | 'titlePic' | 'titleOnly';
 	title: string;
 	text?: string;
 	url?: string;
 }
 
 interface IAppState {
-	view?: string;
-	currentSlide?:  number;
-	sidebar?:  string;
+	view?: 'edit' | 'present';
+	currentSlide?: number;
+	sidebar?: 'controls' | 'slideTypeChooser';
 	slides?: ISlide[];
 }
 

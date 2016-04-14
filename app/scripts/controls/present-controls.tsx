@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import EditBtn from './edit-btn.tsx';
-import PrevNext from './prev-next.tsx';
+import EditBtn from './edit-btn';
+import PrevNext from './prev-next';
 
 class PresentControls extends React.Component<IGenericProps, {}> {
 	render(): React.ReactElement<HTMLDivElement> {

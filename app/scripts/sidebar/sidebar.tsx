@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Controls from '../controls/controls.tsx';
-import SlideTypeChooser from './slide-type-chooser.tsx';
+import Controls from '../controls/controls';
+import SlideTypeChooser from './slide-type-chooser';
 
 class Sidebar extends React.Component<IGenericProps, {}> {
 	render(): React.ReactElement<HTMLDivElement> {

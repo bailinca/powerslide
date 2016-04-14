@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import CurrentSlide from './current-slide/current-slide.tsx';
-import Sidebar from './sidebar/sidebar.tsx';
+import CurrentSlide from './current-slide/current-slide';
+import Sidebar from './sidebar/sidebar';
 
 class Edit extends React.Component<IGenericProps, {}> {
 	render(): React.ReactElement<HTMLDivElement> {

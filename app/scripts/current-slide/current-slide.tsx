@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import TitleText from './title-text.tsx';
-import TitlePic from './title-pic.tsx';
-import TitleOnly from './title-only.tsx';
+import TitleText from './title-text';
+import TitlePic from './title-pic';
+import TitleOnly from './title-only';
 
 class CurrentSlide extends React.Component<IGenericProps, {}> {
 	render(): React.ReactElement<HTMLDivElement> {

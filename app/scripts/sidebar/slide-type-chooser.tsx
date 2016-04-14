@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import SidebarTitleText from './sidebar-title-text.tsx';
-import SidebarTitlePic from './sidebar-title-pic.tsx';
-import SidebarTitleOnly from './sidebar-title-only.tsx';
+import SidebarTitleText from './sidebar-title-text';
+import SidebarTitlePic from './sidebar-title-pic';
+import SidebarTitleOnly from './sidebar-title-only';
 
 class SlideTypeChooser extends React.Component<IGenericProps, {}> {
 

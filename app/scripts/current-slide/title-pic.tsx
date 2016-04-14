@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Title from './title.tsx';
-import Pic from './pic.tsx';
+import Title from './title';
+import Pic from './pic';
 
 class TitlePic extends React.Component<IGenericProps, {}> {
 	render(): React.ReactElement<HTMLDivElement> {

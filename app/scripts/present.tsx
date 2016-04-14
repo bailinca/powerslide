@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import CurrentSlide from './current-slide/current-slide.tsx';
-import PresentControls from './controls/present-controls.tsx';
+import CurrentSlide from './current-slide/current-slide';
+import PresentControls from './controls/present-controls';
 
 class Present extends React.Component<IGenericProps, {}> {
 	render(): React.ReactElement<HTMLDivElement> {

@@ -41,7 +41,7 @@ var common = {
 			},
 			{
 				test: [/\.png?$/, /\.jpg?$/, /\.bmp?$/],
-				loaders: ['file']
+				loader: 'file!img'
 			},
 			{
 				test: /\.scss$/,

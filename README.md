@@ -1,6 +1,5 @@
-# Powerslide (simple presentation/slides application) [![Build Status](https://img.shields.io/travis/facebook/react/master.svg?style=flat)](https://travis-ci.org/facebook/react) [![Build Status](https://travis-ci.org/bailinca/powerslide.svg)](https://travis-ci.org/bailinca/powerslide) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
-[![Dependency Status](https://david-dm.org/nikgraf/belle.svg)](https://david-dm.org/nikgraf/belle)
-[![peerDependency Status](https://david-dm.org/nikgraf/belle/peer-status.svg)](https://david-dm.org/nikgraf/belle#info=peerDependencies)
+# Powerslide (simple presentation/slides application) [![Build Status](https://travis-ci.org/bailinca/powerslide.svg)](https://travis-ci.org/bailinca/powerslide) [![Dependency Status](https://david-dm.org/nikgraf/belle.svg)](https://david-dm.org/nikgraf/belle) [![peerDependency Status](https://david-dm.org/nikgraf/belle/peer-status.svg)](https://david-dm.org/nikgraf/belle#info=peerDependencies) [![Github All Releases](https://img.shields.io/github/downloads/bailinca/powerslide/total.svg?maxAge=2592000)]()
+
 Technologies used: TypeScript, React, JSX, ES6, ES6 modules, Babel, webpack, SASS, TSLint, Karma, Mocha, Chai
 
 ## Demo

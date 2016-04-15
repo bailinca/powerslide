@@ -10,7 +10,12 @@ class NextSlide extends React.Component<IGenericProps, {}> {
 	}
 
 	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component next-slide' onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component next-slide'
+			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Next slide'
+			data-balloon-pos='up'
+		>
 		</div>;
 	}
 };

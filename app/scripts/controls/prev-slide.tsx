@@ -10,7 +10,12 @@ class PrevSlide extends React.Component<IGenericProps, {}> {
 	}
 
 	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component prev-slide' onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component prev-slide'
+			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Previous slide'
+			data-balloon-pos='up'
+		>
 		</div>;
 	}
 };

@@ -12,6 +12,8 @@ class PresentBtn extends React.Component<IGenericProps, {}> {
 		return <div
 			className = 'component present-btn'
 			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Present mode'
+			data-balloon-pos='up'
 		>
 		</div>;
 	}

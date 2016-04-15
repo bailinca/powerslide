@@ -9,7 +9,12 @@ class EditBtn extends React.Component<IGenericProps, {}> {
 	}
 
 	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component edit-btn' onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component edit-btn'
+			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Edit mode'
+			data-balloon-pos='up'
+		>
 		</div>;
 	}
 };

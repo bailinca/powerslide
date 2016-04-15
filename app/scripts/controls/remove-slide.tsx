@@ -19,6 +19,8 @@ class RemoveSlide extends React.Component<IGenericProps, {}> {
 		return <div
 			className = 'component remove-slide'
 			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Remove slide'
+			data-balloon-pos='up'
 		>
 		</div>;
 	}

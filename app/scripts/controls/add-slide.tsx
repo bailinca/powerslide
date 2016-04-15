@@ -9,7 +9,12 @@ class AddSlide extends React.Component<IGenericProps, {}> {
 	}
 
 	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component add-slide' onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component add-slide'
+			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Add slide'
+			data-balloon-pos='up'
+		>
 		</div>;
 	}
 };

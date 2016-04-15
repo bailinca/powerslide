@@ -11,8 +11,12 @@ class SidebarTitlePic extends React.Component<IGenericProps, {}> {
 	}
 
 	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component sidebar-title-pic'
-			onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component sidebar-title-pic'
+			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Title and picture'
+			data-balloon-pos='up'
+		>
 		</div>;
 	}
 };

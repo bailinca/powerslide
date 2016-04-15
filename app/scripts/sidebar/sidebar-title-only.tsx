@@ -10,8 +10,12 @@ class SidebarTitleOnly extends React.Component<IGenericProps, {}> {
 	}
 
 	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component sidebar-title-only'
-			onClick = {this.clickHandler.bind(this)}>
+		return <div
+			className = 'component sidebar-title-only'
+			onClick = {this.clickHandler.bind(this)}
+			data-balloon='Title only'
+			data-balloon-pos='up'
+		>
 		</div>;
 	}
 };

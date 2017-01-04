@@ -45,7 +45,8 @@
 		"build": "webpack",
 		"start": "webpack-dev-server --progress --colors --hot --inline",
 		"test": "karma start karma.conf.js",
-		"test-debug": "karma start karma.conf.js --single-run=false --debug --auto-watch"
+		"test-debug": "karma start karma.conf.js --single-run=false --debug --auto-watch",
+		"deploy": "npm run build & cp -r build/. docs/"
 	},
 	"repository": {
 		"type": "git",

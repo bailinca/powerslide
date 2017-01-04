@@ -4,8 +4,8 @@ class SidebarTitlePic extends React.Component<IGenericProps, {}> {
 
 	clickHandler(): void {
 		this.props.addSlide({
-			'type': 'titlePic',
 			'title': '',
+			'type': 'titlePic',
 			'url': ''
 		});
 	}

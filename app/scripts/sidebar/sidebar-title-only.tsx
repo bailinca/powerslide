@@ -4,8 +4,8 @@ class SidebarTitleOnly extends React.Component<IGenericProps, {}> {
 
 	clickHandler(): void {
 		this.props.addSlide({
-			'type': 'titleOnly',
-			'title': ''
+			'title': '',
+			'type': 'titleOnly'
 		});
 	}
 

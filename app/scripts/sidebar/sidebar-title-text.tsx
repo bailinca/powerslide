@@ -4,9 +4,9 @@ class SidebarTitleText extends React.Component<IGenericProps, {}> {
 
 	clickHandler(): void {
 		this.props.addSlide({
-			'type': 'titleText',
+			'text': '',
 			'title': '',
-			'text': ''
+			'type': 'titleText'
 		});
 	}
 

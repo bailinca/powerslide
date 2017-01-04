@@ -10,7 +10,7 @@ import {render} from 'react-dom';
 import Header from './header';
 import Edit from './edit';
 import Present from './present';
-import {defaultState} from './defaultState.ts';
+import {defaultState} from './defaultState';
 
 ((function(): void {
 	const appElement: Element = document.createElement('div');
@@ -33,7 +33,8 @@ import {defaultState} from './defaultState.ts';
 		updateAppState(newState: IAppState): void {
 			this.setState(
 				newState,
-				() => localStorage.setItem('state', JSON.stringify(this.state)));
+				() => localStorage.setItem('state', JSON.stringify(this.state))
+			);
 		}
 
 		render(): React.ReactElement<HTMLDivElement> {

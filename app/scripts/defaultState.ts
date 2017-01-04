@@ -1,33 +1,33 @@
 const defaultState: IAppState = {
-	'view': 'edit',
 	'currentSlide': 0,
 	'sidebar': 'controls',
 	'slides': [
 		{
-			'type': 'titleText',
+			'text': 'Slide text',
 			'title': 'Slide 1',
-			'text': 'Slide text'
+			'type': 'titleText'
 		},
 		{
-			'type': 'titlePic',
 			'title': 'Slide 2',
+			'type': 'titlePic',
 			'url': 'http://www.astropython.org/static/images/add_new.png'
 		},
 		{
-			'type': 'titlePic',
 			'title': 'Slide 4',
+			'type': 'titlePic',
 			'url': 'http://www.heyuguys.com/images/2011/11/' +
 				'Small-Fry-Toy-Story-Short.jpg'
 		},
 		{
-			'type': 'titleOnly',
-			'title': 'Slide 5'
+			'title': 'Slide 5',
+			'type': 'titleOnly'
 		},
 		{
-			'type': 'titleOnly',
-			'title': 'Slide 6'
+			'title': 'Slide 6',
+			'type': 'titleOnly'
 		}
-	]
+	],
+	'view': 'edit'
 };
 
 export {defaultState};

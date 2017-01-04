@@ -6,7 +6,7 @@ import {expect} from 'chai';
 import * as TestUtils  from 'react-addons-test-utils';
 
 import Text from './current-slide/text';
-import {defaultState} from './defaultState.ts';
+import {defaultState} from './defaultState';
 
 describe('Text Component', () => {
 	it('has correct type', () => {
@@ -21,17 +21,18 @@ describe('Text Component', () => {
 
 describe('Text Component tree', () => {
 	it('has correct number of elements', () => {
-		const component: React.Component<IGenericProps, {}> |Element | void =
+		const component: React.Component<IGenericProps, {}> | Element | void =
 			TestUtils.renderIntoDocument(<Text
 				state = {defaultState}
-				updateAppState = {() => 0}
-			/>);
+				updateAppState = {() => 0} />
+			);
 
 		const allDivs: (Element | React.Component<IGenericProps | {}, IAppState | {}>)[] =
 			TestUtils.findAllInRenderedTree(
 				component as React.Component<IGenericProps, {}>,
-				(c: React.Component<{}, {}> | Element) => true
-		);
+				(c: React.Component<{}, {}> | Element) => !!c
+			)
+		;
 		expect(allDivs.length).to.equal(3);
 	});
 });

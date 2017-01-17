@@ -1,15 +1,15 @@
 {
 	"compilerOptions": {
-		"target": "es6",
-		"sourceMap": true,
-		"noUnusedParameters": true,
+		"jsx": "react",
 		"noUnusedLocals": true,
-		"jsx": "react"
+		"noUnusedParameters": true,
+		"sourceMap": true,
+		"target": "es6"
 	},
 	"exclude": [
-		"node_modules",
 		"build",
-		"typings"
+		"docs",
+		"node_modules"
 	],
 	"compileOnSave": false
 }

@@ -1,4 +1,3 @@
-/// <reference path="../../typings/main.d.ts"/>
 /// <reference path="./interfaces.d.ts"/>
 
 import '../style/main.scss';
@@ -12,7 +11,7 @@ import Edit from './edit';
 import Present from './present';
 import {defaultState} from './defaultState';
 
-((function(): void {
+(function(): void {
 	const appElement: Element = document.createElement('div');
 	document.body.appendChild(appElement);
 
@@ -58,4 +57,4 @@ import {defaultState} from './defaultState';
 	}
 
 	render(<App/>, appElement);
-})());
+})();

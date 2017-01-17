@@ -2,7 +2,7 @@ import * as React from 'react';
 
 class Text extends React.Component<IGenericProps, {}> {
 
-	changeHandler(e: React.SyntheticEvent): void {
+	changeHandler(e: React.SyntheticEvent<{}>): void {
 		let slides: ISlide[] = this.props.state.slides;
 		slides[this.props.state.currentSlide].text = (e.target as HTMLInputElement).value;
 		this.props.updateAppState(slides);

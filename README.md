@@ -9,7 +9,6 @@ Technologies used: TypeScript, React, JSX, ES6, ES6 modules, Babel, webpack, SAS
 ## Install
 ```
 npm i
-npm run i-typings
 ```
 
 ## Build
@@ -31,7 +30,7 @@ npm run test-debug - repeated unit tests in PhantomJS on every file change
 ```
 
 ## Deploy
-Push a new production build to the /docs folder
+Push a new production build to the /docs folder (publish on Github Pages)
 ```
 npm run deploy
 ```

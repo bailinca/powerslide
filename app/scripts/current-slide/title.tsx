@@ -2,7 +2,7 @@ import * as React from 'react';
 
 class Title extends React.Component<IGenericProps, {}> {
 
-	changeHandler(e: React.SyntheticEvent): void {
+	changeHandler(e: React.SyntheticEvent<{}>): void {
 		let slides: ISlide[] = this.props.state.slides;
 		slides[this.props.state.currentSlide].title = (e.target as HTMLInputElement).value;
 		this.props.updateAppState(slides);

@@ -2,6 +2,10 @@
   "name": "powerslide",
   "version": "1.0.0",
   "main": "webpack.config.js",
+  "engines": {
+    "node": ">=6",
+    "npm": ">=4"
+  },
   "devDependencies": {
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.37",

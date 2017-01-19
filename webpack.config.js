@@ -9,7 +9,7 @@ var common = {
 	entry: [path.resolve(ROOT_PATH, 'app/scripts/app.tsx')],
 
 	resolve: {
-		extensions: ['', '.js', '.tsx', '.tsx', '.ts']
+		extensions: ['', '.js', '.jsx', '.tsx', '.ts']
 	},
 
 	output: {
@@ -35,7 +35,7 @@ var common = {
 		],
 		loaders: [
 			{
-				test: [/\.tsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
+				test: [/\.jsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
 				loaders: ['react-hot', 'babel'],
 				include: path.resolve(ROOT_PATH, 'app')
 			},

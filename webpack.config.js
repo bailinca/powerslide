@@ -1,22 +1,37 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var merge = require('webpack-merge');
-var path = require('path');
-var webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const merge = require('webpack-merge');
+const {resolve} = require('path');
+const webpack = require('webpack');
 
-var common = {
+const common = {
 
-	entry: [path.resolve(__dirname, 'app/scripts/app.tsx')],
+	entry: [resolve(__dirname, 'app/scripts/app.tsx')],
 
 	resolve: {
 		extensions: ['.js', '.jsx', '.tsx', '.ts']
 	},
 
 	output: {
-		path: path.resolve(__dirname, 'build'),
-		filename: 'bundle.js'
+		path: resolve(__dirname, 'build'),
+		filename: 'bundle.js',
+		publicPath: '/'
+		// necessary for HMR to know where to load the hot update chunks
 	},
 
+	context: resolve(__dirname, 'app'),
+
 	devtool: 'source-map',
+
+	devServer: {
+		hot: true,
+		// enable HMR on the server
+
+		contentBase: resolve(__dirname, 'build'),
+		// match the output path
+
+		publicPath: '/'
+		// match the output `publicPath`
+	},
 
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -28,14 +43,7 @@ var common = {
 		rules: [
 			{
 				test: [/\.ts?$/, /\.tsx?$/],
-				enforce: 'pre',
-				use: ['ts-loader', 'tslint-loader'],
-				include: path.resolve(__dirname, 'app')
-			},
-			{
-				test: [/\.jsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
-				use: ['react-hot-loader', 'babel-loader'],
-				include: path.resolve(__dirname, 'app')
+				use: ['babel-loader', 'ts-loader', 'tslint-loader']
 			},
 			{
 				test: [/\.png?$/, /\.jpg?$/, /\.bmp?$/],
@@ -67,7 +75,27 @@ switch (process.env.npm_lifecycle_event) {
 		});
 		break;
 	case 'start':
-		module.exports = common;
+		module.exports = merge(common, {
+			entry: [
+				'react-hot-loader/patch',
+				// activate HMR for React
+
+				'webpack-dev-server/client?http://localhost:8080',
+				// bundle the client for webpack-dev-server
+				// and connect to the provided endpoint
+
+				'webpack/hot/only-dev-server'
+				// bundle the client for hot reloading
+				// only- means to only hot reload for successful updates
+			],
+			plugins: [
+				new webpack.HotModuleReplacementPlugin(),
+				// enable HMR globally
+
+				new webpack.NamedModulesPlugin(),
+				// prints more readable module names in the browser console on HMR updates
+			]
+		});
 		break;
 	default:
 		break;

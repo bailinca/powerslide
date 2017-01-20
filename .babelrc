@@ -1,3 +1,13 @@
 {
-	"presets": ["latest", "react"]
+  "presets": [
+    ["latest", {"modules": false}],
+    // webpack understands the native import syntax, and uses it for tree shaking
+
+    "stage-2",
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel"
+    // Enables React code to work with HMR.
+  ]
 }

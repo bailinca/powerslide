@@ -2,14 +2,14 @@ var path = require("path");
 
 var config = {
 	resolve: {
-		extensions: ['', '.js', '.tsx', '.tsx', '.ts']
+		extensions: ['.js', '.jsx', '.tsx', '.ts']
 	},
 	devtool: 'source-map',
 	module: {
-		loaders: [
+		rules: [
 			{
-				test: /\.tsx?$/, loader: 'babel!ts',
-				include: path.resolve(__dirname, "app")
+				test: [/\.ts?$/, /\.tsx?$/],
+				use: ['babel-loader', 'ts-loader', 'tslint-loader']
 			}
 		]
 	}

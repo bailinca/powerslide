@@ -1,19 +1,18 @@
-var path = require('path');
-var merge = require('webpack-merge');
-var webpack = require('webpack');
-var ROOT_PATH = path.resolve(__dirname);
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var merge = require('webpack-merge');
+var path = require('path');
+var webpack = require('webpack');
 
 var common = {
 
-	entry: [path.resolve(ROOT_PATH, 'app/scripts/app.tsx')],
+	entry: [path.resolve(__dirname, 'app/scripts/app.tsx')],
 
 	resolve: {
-		extensions: ['', '.js', '.jsx', '.tsx', '.ts']
+		extensions: ['.js', '.jsx', '.tsx', '.ts']
 	},
 
 	output: {
-		path: path.resolve(ROOT_PATH, 'build'),
+		path: path.resolve(__dirname, 'build'),
 		filename: 'bundle.js'
 	},
 
@@ -26,26 +25,25 @@ var common = {
 	],
 
 	module: {
-		preLoaders: [
+		rules: [
 			{
 				test: [/\.ts?$/, /\.tsx?$/],
-				loader: 'ts!tslint',
-				include: path.resolve(ROOT_PATH, 'app')
-			}
-		],
-		loaders: [
+				enforce: 'pre',
+				use: ['ts-loader', 'tslint-loader'],
+				include: path.resolve(__dirname, 'app')
+			},
 			{
 				test: [/\.jsx?$/, /\.js?$/, /\.ts?$/, /\.tsx?$/],
-				loaders: ['react-hot', 'babel'],
-				include: path.resolve(ROOT_PATH, 'app')
+				use: ['react-hot-loader', 'babel-loader'],
+				include: path.resolve(__dirname, 'app')
 			},
 			{
 				test: [/\.png?$/, /\.jpg?$/, /\.bmp?$/],
-				loader: 'file!img'
+				use: ['file-loader', 'img-loader']
 			},
 			{
 				test: /\.scss$/,
-				loaders: ['style', 'css', 'sass'] // loader: 'style!css!sass' ?
+				use: ['style-loader', 'css-loader', 'sass-loader']
 			}
 		]
 	}
@@ -69,12 +67,7 @@ switch (process.env.npm_lifecycle_event) {
 		});
 		break;
 	case 'start':
-		module.exports = merge(common, {
-			entry: [
-				'webpack-dev-server/client?http://localhost:8080',
-				'webpack/hot/dev-server'
-			]
-		});
+		module.exports = common;
 		break;
 	default:
 		break;

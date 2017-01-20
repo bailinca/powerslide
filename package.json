@@ -41,14 +41,14 @@
     "tslint": "^4.3.1",
     "tslint-loader": "^3.3.0",
     "typescript": "^2.1.5",
-    "webpack": "^1.14.0",
+    "webpack": "^2.2.0",
     "webpack-config": "^6.2.1",
     "webpack-dev-server": "^1.16.2",
     "webpack-merge": "^2.4.0"
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --progress --colors --hot --inline",
+    "start": "webpack-dev-server --progress --colors --hot --inline --open",
     "test": "karma start karma.conf.js",
     "test-debug": "karma start karma.conf.js --single-run=false --debug --auto-watch",
     "deploy": "git checkout master & npm run build & rm -rf docs & cp -r build/. docs/ & git add docs & git commit -m deploy & git push origin master"

@@ -13,9 +13,7 @@ const common = {
 
 	output: {
 		path: resolve(__dirname, 'build'),
-		filename: 'bundle.js',
-		publicPath: '/'
-		// necessary for HMR to know where to load the hot update chunks
+		filename: 'bundle.js'
 	},
 
 	context: resolve(__dirname, 'app'),
@@ -26,11 +24,8 @@ const common = {
 		hot: true,
 		// enable HMR on the server
 
-		contentBase: resolve(__dirname, 'build'),
+		contentBase: resolve(__dirname, 'build')
 		// match the output path
-
-		publicPath: '/'
-		// match the output `publicPath`
 	},
 
 	plugins: [

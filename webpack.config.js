@@ -41,12 +41,24 @@ const common = {
 				use: ['babel-loader', 'ts-loader', 'tslint-loader']
 			},
 			{
-				test: [/\.png?$/, /\.jpg?$/, /\.bmp?$/],
+				test: [/\.png?$/, /\.jpg?$/, /\.jpeg?$/, /\.bmp?$/, /\.svg?$/, /\.gif?$/],
 				use: ['file-loader', 'img-loader']
+			},
+			{
+				test: /\.(ico|eot|otf|webp|ttf)(\?.*)?$/,
+				use: ['file-loader']
 			},
 			{
 				test: /\.scss$/,
 				use: ['style-loader', 'css-loader', 'sass-loader']
+			},
+			{
+				test: /\.css?$/,
+				use: ['style-loader', 'css-loader']
+			},
+			{
+				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				use: ['url-loader']
 			}
 		]
 	}

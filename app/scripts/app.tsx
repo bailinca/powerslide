@@ -1,6 +1,7 @@
 /// <reference path="./interfaces.d.ts"/>
 
 import '../style/main.scss';
+import 'typeface-poiret-one';
 
 import 'balloon-css';
 import * as React from 'react';

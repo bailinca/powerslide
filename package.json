@@ -9,7 +9,7 @@
   "devDependencies": {
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.39",
-    "@types/react": "^15.0.8",
+    "@types/react": "^15.0.9",
     "@types/react-addons-test-utils": "^0.14.17",
     "@types/react-dom": "^0.14.23",
     "babel-core": "^6.22.1",
@@ -40,7 +40,7 @@
     "style-loader": "^0.13.1",
     "ts-loader": "^2.0.0",
     "tslint": "^4.4.2",
-    "tslint-loader": "^3.3.0",
+    "tslint-loader": "^3.4.2",
     "typeface-poiret-one": "0.0.22",
     "typescript": "^2.1.6",
     "url-loader": "^0.5.7",

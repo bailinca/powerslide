@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 const common = {
 
-	entry: [resolve(__dirname, 'app/scripts/app.tsx')],
+	entry: [resolve(__dirname, 'app/js/app.tsx')],
 
 	resolve: {
 		extensions: ['.js', '.jsx', '.tsx', '.ts']

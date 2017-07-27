@@ -1,16 +1,12 @@
 import * as React from 'react';
+import { connect, MapDispatchToProps } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import * as actionTypes from '../actionTypes';
+import * as actions from '../actions';
 
 class NextSlide extends React.Component<IGenericProps, {}> {
-  static contextTypes: React.ValidationMap<any> = {
-    store: React.PropTypes.object
-  };
-
   clickHandler(): void {
-    this.context.store.dispatch({
-      type: actionTypes.NEXT_SLIDE
-    });
+    (this.props as any).actions.nextSlide();
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -25,4 +21,8 @@ class NextSlide extends React.Component<IGenericProps, {}> {
   }
 }
 
-export default NextSlide;
+const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
+  actions: bindActionCreators(actions as any, dispatch)
+});
+
+export default connect(null, mapDispatchToProps)(NextSlide);

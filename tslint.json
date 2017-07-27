@@ -23,7 +23,6 @@
     "no-unused-expression": true,
     "no-var-keyword": true,
     "no-var-requires": true,
-    "object-literal-sort-keys": true,
     "one-line": [
       true,
       "check-open-brace",

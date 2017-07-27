@@ -1,18 +1,12 @@
 import * as React from 'react';
-import { connect, MapStateToProps } from 'react-redux';
+import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import * as actionTypes from '../actionTypes';
+import * as actions from '../actions';
 
 class Title extends React.Component<IAppState, {}> {
-  static contextTypes: React.ValidationMap<any> = {
-    store: React.PropTypes.object
-  };
-
   changeHandler(e: React.SyntheticEvent<{}>): void {
-    this.context.store.dispatch({
-      title: (e.target as HTMLInputElement).value,
-      type: actionTypes.CHANGE_TITLE
-    });
+    (this.props as any).actions.changeTitle((e.target as HTMLInputElement).value);
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -38,4 +32,8 @@ const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
   };
 };
 
-export default connect(mapStateToProps)(Title);
+const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
+  actions: bindActionCreators(actions as any, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Title);

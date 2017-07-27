@@ -1,17 +1,12 @@
 import * as React from 'react';
+import { connect, MapDispatchToProps } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import * as actionTypes from '../actionTypes';
+import * as actions from '../actions';
 
 class SidebarTitleOnly extends React.Component<IGenericProps, {}> {
-  static contextTypes: React.ValidationMap<any> = {
-    store: React.PropTypes.object
-  };
-
   clickHandler(): void {
-    this.context.store.dispatch({
-      slideType: 'titleOnly',
-      type: actionTypes.CHOOSE_SLIDE
-    });
+    (this.props as any).actions.chooseSlide('titleOnly');
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -26,4 +21,8 @@ class SidebarTitleOnly extends React.Component<IGenericProps, {}> {
   }
 }
 
-export default SidebarTitleOnly;
+const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
+  actions: bindActionCreators(actions as any, dispatch)
+});
+
+export default connect(null, mapDispatchToProps)(SidebarTitleOnly);

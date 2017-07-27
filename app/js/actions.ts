@@ -36,9 +36,10 @@ export const addSlide: any = () => {
   };
 };
 
-export const chooseSlide: any = () => {
+export const chooseSlide: any = (slideType: string) => {
   return {
-    type: actionTypes.CHOOSE_SLIDE
+    type: actionTypes.CHOOSE_SLIDE,
+    slideType
   };
 };
 

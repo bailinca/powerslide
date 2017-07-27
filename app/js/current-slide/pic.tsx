@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as actions from '../actions';
+import { actions } from '../actions';
 
 class Pic extends React.Component<IAppState, {}> {
   changeHandler(e: React.SyntheticEvent<{}>): void {

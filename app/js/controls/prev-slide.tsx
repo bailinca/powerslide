@@ -2,9 +2,9 @@ import * as React from 'react';
 import { connect, MapDispatchToProps } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as actions from '../actions';
+import { actions } from '../actions';
 
-class PrevSlide extends React.Component<IGenericProps, {}> {
+class PrevSlide extends React.Component<{}, {}> {
   clickHandler(): void {
     (this.props as any).actions.prevSlide();
   }

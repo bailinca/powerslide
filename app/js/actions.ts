@@ -1,71 +1,86 @@
+import { ActionCreator, ActionCreatorsMapObject } from 'redux';
 import * as actionTypes from './actionTypes';
 
-export const edit: any = () => {
+const edit: ActionCreator<any> = () => {
   return {
     type: actionTypes.EDIT
   };
 };
 
-export const present: any = () => {
+const present: ActionCreator<any> = () => {
   return {
     type: actionTypes.PRESENT
   };
 };
 
-export const prevSlide: any = () => {
+const prevSlide: ActionCreator<any> = () => {
   return {
     type: actionTypes.PREV_SLIDE
   };
 };
 
-export const nextSlide: any = () => {
+const nextSlide: ActionCreator<any> = () => {
   return {
     type: actionTypes.NEXT_SLIDE
   };
 };
 
-export const removeSlide: any = () => {
+const removeSlide: ActionCreator<any> = () => {
   return {
     type: actionTypes.REMOVE_SLIDE
   };
 };
 
-export const addSlide: any = () => {
+const addSlide: ActionCreator<any> = () => {
   return {
     type: actionTypes.ADD_SLIDE
   };
 };
 
-export const chooseSlide: any = (slideType: string) => {
+const chooseSlide: ActionCreator<any> = (slideType: string) => {
   return {
     type: actionTypes.CHOOSE_SLIDE,
     slideType
   };
 };
 
-export const exitChooseSlide: any = () => {
+const exitChooseSlide: ActionCreator<any> = () => {
   return {
     type: actionTypes.EXIT_CHOOSE_SLIDE
   };
 };
 
-export const changeTitle: any = (title: string) => {
+const changeTitle: ActionCreator<any> = (title: string) => {
   return {
     type: actionTypes.CHANGE_TITLE,
     title
   };
 };
 
-export const changeText: any = (text: string) => {
+const changeText: ActionCreator<any> = (text: string) => {
   return {
     type: actionTypes.CHANGE_TEXT,
     text
   };
 };
 
-export const changePic: any = (url: string) => {
+const changePic: ActionCreator<any> = (url: string) => {
   return {
     type: actionTypes.CHANGE_PIC,
     url
   };
+};
+
+export const actions: ActionCreatorsMapObject = {
+  edit,
+  present,
+  prevSlide,
+  nextSlide,
+  removeSlide,
+  addSlide,
+  chooseSlide,
+  exitChooseSlide,
+  changeTitle,
+  changeText,
+  changePic
 };

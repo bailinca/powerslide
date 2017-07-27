@@ -15,7 +15,3 @@ interface IAppState {
   sidebar?: ISidebar;
   slides?: ISlide[];
 }
-
-interface IGenericProps {
-  addSlide?: (val: ISlide) => void;
-}

@@ -25,7 +25,6 @@
     "karma-webpack": "^2.0.4",
     "mocha": "^3.4.2",
     "react": "^15.6.1",
-    "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "redux": "^3.7.2",

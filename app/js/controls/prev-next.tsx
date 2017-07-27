@@ -4,18 +4,14 @@ import PrevSlide from './prev-slide';
 import NextSlide from './next-slide';
 
 class PrevNext extends React.Component<IGenericProps, {}> {
-	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component prev-next'>
-			<PrevSlide
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-			/>
-			<NextSlide
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-			/>
-		</div>;
-	}
-};
+  render(): React.ReactElement<HTMLDivElement> {
+    return (
+      <div className="component prev-next">
+        <PrevSlide />
+        <NextSlide />
+      </div>
+    );
+  }
+}
 
 export default PrevNext;

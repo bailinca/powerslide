@@ -1,29 +1,28 @@
 import * as React from 'react';
 
+import * as actionTypes from '../actionTypes';
+
 class RemoveSlide extends React.Component<IGenericProps, {}> {
+  static contextTypes: React.ValidationMap<any> = {
+    store: React.PropTypes.object
+  };
 
-	clickHandler(): void {
-		let slides: ISlide[] = this.props.state.slides;
-		if (slides.length === 1) {
-			return;
-		}
-		slides.splice(this.props.state.currentSlide, 1);
-		this.props.updateAppState({
-			slides,
-			'currentSlide': slides.length === this.props.state.currentSlide ?
-				(this.props.state.currentSlide - 1) : this.props.state.currentSlide
-		});
-	}
+  clickHandler(): void {
+    this.context.store.dispatch({
+      type: actionTypes.REMOVE_SLIDE
+    });
+  }
 
-	render(): React.ReactElement<HTMLDivElement> {
-		return <div
-			className = 'component remove-slide'
-			onClick = {this.clickHandler.bind(this)}
-			data-balloon='Remove slide'
-			data-balloon-pos='up'
-		>
-		</div>;
-	}
-};
+  render(): React.ReactElement<HTMLDivElement> {
+    return (
+      <div
+        className="component remove-slide"
+        onClick={this.clickHandler.bind(this)}
+        data-balloon="Remove slide"
+        data-balloon-pos="up"
+      />
+    );
+  }
+}
 
 export default RemoveSlide;

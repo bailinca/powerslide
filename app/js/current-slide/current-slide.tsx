@@ -1,37 +1,40 @@
 import * as React from 'react';
+import { connect, MapStateToProps } from 'react-redux';
 
 import TitleText from './title-text';
 import TitlePic from './title-pic';
 import TitleOnly from './title-only';
 
-class CurrentSlide extends React.Component<IGenericProps, {}> {
-	render(): React.ReactElement<HTMLDivElement> {
-		const type: string = this.props.state.slides[this.props.state.currentSlide].type;
-		return <div className = 'component current-slide'>
-			{
-				type === 'titleText' ?
-					<TitleText
-						state = {this.props.state}
-						updateAppState = {this.props.updateAppState}
-					/> : type === 'titlePic' ?
-					<TitlePic
-						state = {this.props.state}
-						updateAppState = {this.props.updateAppState}
-					/> :
-					<TitleOnly
-						state = {this.props.state}
-						updateAppState = {this.props.updateAppState}
-					/>
-			}
-			{
-				this.props.state.view === 'edit' ?
-				<h3>
-					{this.props.state.currentSlide + 1 + ' / ' +
-						this.props.state.slides.length}
-				</h3> : null
-			}
-		</div>;
-	}
+class CurrentSlide extends React.Component<IAppState, {}> {
+  static propTypes: React.ValidationMap<any> = {
+    currentSlide: React.PropTypes.number,
+    slides: React.PropTypes.array,
+    view: React.PropTypes.string
+  };
+
+  render(): React.ReactElement<HTMLDivElement> {
+    const { slides, view, currentSlide } = this.props;
+    const type: string = slides[currentSlide].type;
+
+    return (
+      <div className="component current-slide">
+        {type === 'titleText' ? <TitleText /> : type === 'titlePic' ? <TitlePic /> : <TitleOnly />}
+        {view === 'edit'
+          ? <h3>
+              {currentSlide + 1 + ' / ' + slides.length}
+            </h3>
+          : null}
+      </div>
+    );
+  }
+}
+
+const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+  return {
+    currentSlide: state.currentSlide,
+    slides: state.slides,
+    view: state.view
+  };
 };
 
-export default CurrentSlide;
+export default connect(mapStateToProps)(CurrentSlide);

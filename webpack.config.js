@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 const common = {
 
-	entry: [resolve(__dirname, 'app/js/app.tsx')],
+	entry: [resolve(__dirname, 'app/js/index.tsx')],
 
 	resolve: {
 		extensions: ['.js', '.jsx', '.tsx', '.ts']
@@ -41,8 +41,12 @@ const common = {
 				use: ['babel-loader', 'ts-loader', 'tslint-loader']
 			},
 			{
+				test: [/\.js?$/, /\.jsx?$/],
+				use: ['babel-loader']
+			},
+			{
 				test: [/\.png?$/, /\.jpg?$/, /\.jpeg?$/, /\.bmp?$/, /\.svg?$/, /\.gif?$/],
-				use: ['file-loader', 'img-loader']
+				use: ['url-loader']
 			},
 			{
 				test: /\.(ico|eot|otf|webp|ttf)(\?.*)?$/,

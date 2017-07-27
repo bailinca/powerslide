@@ -49,9 +49,10 @@ export const exitChooseSlide: any = () => {
   };
 };
 
-export const changeTitle: any = () => {
+export const changeTitle: any = (title: string) => {
   return {
-    type: actionTypes.CHANGE_TITLE
+    type: actionTypes.CHANGE_TITLE,
+    title
   };
 };
 
@@ -62,8 +63,9 @@ export const changeText: any = (text: string) => {
   };
 };
 
-export const changePic: any = () => {
+export const changePic: any = (url: string) => {
   return {
-    type: actionTypes.CHANGE_PIC
+    type: actionTypes.CHANGE_PIC,
+    url
   };
 };

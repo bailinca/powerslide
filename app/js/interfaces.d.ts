@@ -1,14 +1,18 @@
+type ISlideType = 'titleText' | 'titlePic' | 'titleOnly';
+type IView = 'edit' | 'present';
+type ISidebar = 'controls' | 'slideTypeChooser';
+
 interface ISlide {
-  type: 'titleText' | 'titlePic' | 'titleOnly';
+  type: ISlideType;
   title: string;
   text?: string;
   url?: string;
 }
 
 interface IAppState {
-  view?: 'edit' | 'present';
-  currentSlide?: number;
-  sidebar?: 'controls' | 'slideTypeChooser';
+  view?: IView;
+  currentSlideIndex?: number;
+  sidebar?: ISidebar;
   slides?: ISlide[];
 }
 

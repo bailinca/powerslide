@@ -5,11 +5,11 @@ import Header from './header';
 import Edit from './edit';
 import Present from './present';
 
-class App extends React.Component<any, IAppState> {
-  static propTypes: React.ValidationMap<any> = {
-    view: React.PropTypes.string
-  };
+interface IProps {
+  view: IView;
+}
 
+class App extends React.Component<IProps, {}> {
   render(): React.ReactElement<HTMLDivElement> {
     return (
       <div className="component app">

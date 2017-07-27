@@ -10,8 +10,8 @@ class Pic extends React.Component<IAppState, {}> {
   }
 
   render(): React.ReactElement<HTMLDivElement> {
-    const { slides, currentSlide } = this.props;
-    const url: string = slides[currentSlide].url;
+    const { slides, currentSlideIndex } = this.props;
+    const url: string = slides[currentSlideIndex].url;
 
     return (
       <div className="component pic" style={{ backgroundImage: `url(${url})` }}>
@@ -23,7 +23,7 @@ class Pic extends React.Component<IAppState, {}> {
 
 const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
   return {
-    currentSlide: state.currentSlide,
+    currentSlideIndex: state.currentSlideIndex,
     slides: state.slides
   };
 };

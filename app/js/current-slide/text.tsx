@@ -10,12 +10,12 @@ class Text extends React.Component<IAppState, {}> {
   }
 
   render(): React.ReactElement<HTMLDivElement> {
-    const { slides, view, currentSlide } = this.props;
+    const { slides, view, currentSlideIndex } = this.props;
 
     return (
       <div className="component text">
         <textarea
-          value={slides[currentSlide].text}
+          value={slides[currentSlideIndex].text}
           onChange={this.changeHandler.bind(this)}
           disabled={view === 'edit' ? false : true}
         />
@@ -26,7 +26,7 @@ class Text extends React.Component<IAppState, {}> {
 
 const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
   return {
-    currentSlide: state.currentSlide,
+    currentSlideIndex: state.currentSlideIndex,
     slides: state.slides,
     view: state.view
   };

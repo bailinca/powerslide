@@ -1,5 +1,5 @@
 const defaultState: IAppState = {
-  currentSlide: 0,
+  currentSlideIndex: 0,
   sidebar: 'controls',
   slides: [
     {

@@ -1,47 +1,31 @@
 import * as React from 'react';
 
+import * as actionTypes from '../actionTypes';
+
 import SidebarTitleText from './sidebar-title-text';
 import SidebarTitlePic from './sidebar-title-pic';
 import SidebarTitleOnly from './sidebar-title-only';
 
 class SlideTypeChooser extends React.Component<IGenericProps, {}> {
+  static contextTypes: React.ValidationMap<any> = {
+    store: React.PropTypes.object
+  };
 
-	clickHandler(): void {
-		this.props.updateAppState({
-			'sidebar': 'controls'
-		});
-	}
+  clickHandler(): void {
+    this.context.store.dispatch({
+      type: actionTypes.EXIT_CHOOSE_SLIDE
+    });
+  }
 
-	addSlide(slide: ISlide): void {
-		let slides: ISlide[] = this.props.state.slides;
-		slides.splice(this.props.state.currentSlide + 1, null, slide);
-		this.props.updateAppState({
-			slides,
-			'currentSlide': this.props.state.currentSlide + 1
-		});
-	}
-
-	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component slide-type-chooser'
-			onClick = {this.clickHandler.bind(this)}>
-
-			<SidebarTitleText
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-				addSlide = {this.addSlide.bind(this)}
-			/>
-			<SidebarTitlePic
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-				addSlide = {this.addSlide.bind(this)}
-			/>
-			<SidebarTitleOnly
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-				addSlide = {this.addSlide.bind(this)}
-			/>
-		</div>;
-	}
-};
+  render(): React.ReactElement<HTMLDivElement> {
+    return (
+      <div className="component slide-type-chooser" onClick={this.clickHandler.bind(this)}>
+        <SidebarTitleText />
+        <SidebarTitlePic />
+        <SidebarTitleOnly />
+      </div>
+    );
+  }
+}
 
 export default SlideTypeChooser;

@@ -4,18 +4,14 @@ import Title from './title';
 import Pic from './pic';
 
 class TitlePic extends React.Component<IGenericProps, {}> {
-	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component title-pic'>
-			<Title
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-			/>
-			<Pic
-				state = {this.props.state}
-				updateAppState = {this.props.updateAppState}
-			/>
-		</div>;
-	}
-};
+  render(): React.ReactElement<HTMLDivElement> {
+    return (
+      <div className="component title-pic">
+        <Title />
+        <Pic />
+      </div>
+    );
+  }
+}
 
 export default TitlePic;

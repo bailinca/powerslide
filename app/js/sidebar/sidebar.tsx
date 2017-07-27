@@ -1,24 +1,25 @@
 import * as React from 'react';
+import { connect, MapStateToProps } from 'react-redux';
 
 import Controls from '../controls/controls';
 import SlideTypeChooser from './slide-type-chooser';
 
-class Sidebar extends React.Component<IGenericProps, {}> {
-	render(): React.ReactElement<HTMLDivElement> {
-		return <div className = 'component sidebar'>
-			{
-				this.props.state.sidebar === 'controls' ?
-					<Controls
-						state = {this.props.state}
-						updateAppState = {this.props.updateAppState}
-					/> :
-					<SlideTypeChooser
-						state = {this.props.state}
-						updateAppState = {this.props.updateAppState}
-					/>
-			}
-		</div>;
-	}
+class Sidebar extends React.Component<IAppState, {}> {
+  render(): React.ReactElement<HTMLDivElement> {
+    const { sidebar } = this.props;
+
+    return (
+      <div className="component sidebar">
+        {sidebar === 'controls' ? <Controls /> : <SlideTypeChooser />}
+      </div>
+    );
+  }
 }
 
-export default Sidebar;
+const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+  return {
+    sidebar: state.sidebar
+  };
+};
+
+export default connect(mapStateToProps)(Sidebar);

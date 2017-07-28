@@ -1,12 +1,22 @@
 import * as React from 'react';
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
 import { actions } from '../actions';
 
-class Text extends React.Component<IAppState, {}> {
+interface IStateProps {
+  view: IView;
+  slides: ISlide[];
+  currentSlideIndex: number;
+}
+
+interface IDispatchProps {
+  actions: ActionCreatorsMapObject;
+}
+
+class Text extends React.Component<IStateProps & IDispatchProps, {}> {
   changeHandler(e: React.SyntheticEvent<{}>): void {
-    (this.props as any).actions.changeText((e.target as HTMLInputElement).value);
+    this.props.actions.changeText((e.target as HTMLInputElement).value);
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -24,7 +34,7 @@ class Text extends React.Component<IAppState, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => {
   return {
     currentSlideIndex: state.currentSlideIndex,
     slides: state.slides,
@@ -32,8 +42,10 @@ const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
   };
 };
 
-const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
-  actions: bindActionCreators(actions as any, dispatch)
+const mapDispatchToProps: MapDispatchToProps<IDispatchProps, {}> = (
+  dispatch: Dispatch<IDispatchProps>
+) => ({
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Text);

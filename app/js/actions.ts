@@ -1,70 +1,70 @@
-import { ActionCreator, ActionCreatorsMapObject } from 'redux';
+import { AnyAction, ActionCreator, ActionCreatorsMapObject } from 'redux';
 import * as actionTypes from './actionTypes';
 
-const edit: ActionCreator<any> = () => {
+const edit: ActionCreator<AnyAction> = () => {
   return {
     type: actionTypes.EDIT
   };
 };
 
-const present: ActionCreator<any> = () => {
+const present: ActionCreator<AnyAction> = () => {
   return {
     type: actionTypes.PRESENT
   };
 };
 
-const prevSlide: ActionCreator<any> = () => {
+const prevSlide: ActionCreator<AnyAction> = () => {
   return {
     type: actionTypes.PREV_SLIDE
   };
 };
 
-const nextSlide: ActionCreator<any> = () => {
+const nextSlide: ActionCreator<AnyAction> = () => {
   return {
     type: actionTypes.NEXT_SLIDE
   };
 };
 
-const removeSlide: ActionCreator<any> = () => {
+const removeSlide: ActionCreator<AnyAction> = () => {
   return {
     type: actionTypes.REMOVE_SLIDE
   };
 };
 
-const addSlide: ActionCreator<any> = () => {
+const addSlide: ActionCreator<AnyAction> = () => {
   return {
     type: actionTypes.ADD_SLIDE
   };
 };
 
-const chooseSlide: ActionCreator<any> = (slideType: string) => {
+const chooseSlide: ActionCreator<AnyAction> = (slideType: string) => {
   return {
     type: actionTypes.CHOOSE_SLIDE,
     slideType
   };
 };
 
-const exitChooseSlide: ActionCreator<any> = () => {
+const exitChooseSlide: ActionCreator<AnyAction> = () => {
   return {
     type: actionTypes.EXIT_CHOOSE_SLIDE
   };
 };
 
-const changeTitle: ActionCreator<any> = (title: string) => {
+const changeTitle: ActionCreator<AnyAction> = (title: string) => {
   return {
     type: actionTypes.CHANGE_TITLE,
     title
   };
 };
 
-const changeText: ActionCreator<any> = (text: string) => {
+const changeText: ActionCreator<AnyAction> = (text: string) => {
   return {
     type: actionTypes.CHANGE_TEXT,
     text
   };
 };
 
-const changePic: ActionCreator<any> = (url: string) => {
+const changePic: ActionCreator<AnyAction> = (url: string) => {
   return {
     type: actionTypes.CHANGE_PIC,
     url

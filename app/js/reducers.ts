@@ -1,11 +1,11 @@
-import { Action, Reducer } from 'redux';
+import { AnyAction, Reducer } from 'redux';
 
 import { defaultState } from './defaultState';
 import * as actionTypes from './actionTypes';
 
 const reducer: Reducer<IAppState> = (
   currentState: IAppState = defaultState,
-  action: Action
+  action: AnyAction
 ): IAppState => {
   let slides: ISlide[];
 
@@ -63,7 +63,7 @@ const reducer: Reducer<IAppState> = (
       slides.splice(currentState.currentSlideIndex + 1, null, {
         text: '',
         title: '',
-        type: (action as any).slideType,
+        type: action.slideType,
         url: ''
       });
       currentState = Object.assign({}, currentState, {
@@ -80,7 +80,7 @@ const reducer: Reducer<IAppState> = (
 
     case actionTypes.CHANGE_PIC:
       slides = Array(...currentState.slides);
-      slides[currentState.currentSlideIndex].url = (action as any).url;
+      slides[currentState.currentSlideIndex].url = action.url;
       currentState = Object.assign({}, currentState, {
         slides
       });
@@ -88,7 +88,7 @@ const reducer: Reducer<IAppState> = (
 
     case actionTypes.CHANGE_TEXT:
       slides = Array(...currentState.slides);
-      slides[currentState.currentSlideIndex].text = (action as any).text;
+      slides[currentState.currentSlideIndex].text = action.text;
       currentState = Object.assign({}, currentState, {
         slides
       });
@@ -96,7 +96,7 @@ const reducer: Reducer<IAppState> = (
 
     case actionTypes.CHANGE_TITLE:
       slides = Array(...currentState.slides);
-      slides[currentState.currentSlideIndex].title = (action as any).title;
+      slides[currentState.currentSlideIndex].title = action.title;
       currentState = Object.assign({}, currentState, {
         slides
       });

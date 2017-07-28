@@ -1,12 +1,16 @@
 import * as React from 'react';
 import { connect, MapDispatchToProps } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
 import { actions } from '../actions';
 
-class AddSlide extends React.Component<{}, {}> {
+interface IDispatchProps {
+  actions: ActionCreatorsMapObject;
+}
+
+class AddSlide extends React.Component<IDispatchProps, {}> {
   clickHandler(): void {
-    (this.props as any).actions.addSlide();
+    this.props.actions.addSlide();
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -21,8 +25,10 @@ class AddSlide extends React.Component<{}, {}> {
   }
 }
 
-const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
-  actions: bindActionCreators(actions as any, dispatch)
+const mapDispatchToProps: MapDispatchToProps<IDispatchProps, {}> = (
+  dispatch: Dispatch<IDispatchProps>
+) => ({
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(null, mapDispatchToProps)(AddSlide);

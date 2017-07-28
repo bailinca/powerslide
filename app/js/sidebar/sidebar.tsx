@@ -4,7 +4,11 @@ import { connect, MapStateToProps } from 'react-redux';
 import Controls from '../controls/controls';
 import SlideTypeChooser from './slide-type-chooser';
 
-class Sidebar extends React.Component<IAppState, {}> {
+interface IStateProps {
+  sidebar: ISidebar;
+}
+
+class Sidebar extends React.Component<IStateProps, {}> {
   render(): React.ReactElement<HTMLDivElement> {
     const { sidebar } = this.props;
 
@@ -16,7 +20,7 @@ class Sidebar extends React.Component<IAppState, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => {
   return {
     sidebar: state.sidebar
   };

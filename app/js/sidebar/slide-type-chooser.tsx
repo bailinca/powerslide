@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect, MapDispatchToProps } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
 import { actions } from '../actions';
 
@@ -8,9 +8,13 @@ import SidebarTitleText from './sidebar-title-text';
 import SidebarTitlePic from './sidebar-title-pic';
 import SidebarTitleOnly from './sidebar-title-only';
 
-class SlideTypeChooser extends React.Component<{}, {}> {
+interface IDispatchProps {
+  actions: ActionCreatorsMapObject;
+}
+
+class SlideTypeChooser extends React.Component<IDispatchProps, {}> {
   clickHandler(): void {
-    (this.props as any).actions.exitChooseSlide();
+    this.props.actions.exitChooseSlide();
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -24,8 +28,10 @@ class SlideTypeChooser extends React.Component<{}, {}> {
   }
 }
 
-const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
-  actions: bindActionCreators(actions as any, dispatch)
+const mapDispatchToProps: MapDispatchToProps<IDispatchProps, {}> = (
+  dispatch: Dispatch<IDispatchProps>
+) => ({
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(null, mapDispatchToProps)(SlideTypeChooser);

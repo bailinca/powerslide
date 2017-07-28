@@ -1,12 +1,16 @@
 import * as React from 'react';
 import { connect, MapDispatchToProps } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
 import { actions } from '../actions';
 
-class PresentBtn extends React.Component<{}, {}> {
+interface IDispatchProps {
+  actions: ActionCreatorsMapObject;
+}
+
+class PresentBtn extends React.Component<IDispatchProps, {}> {
   clickHandler(): void {
-    (this.props as any).actions.present();
+    this.props.actions.present();
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -21,8 +25,10 @@ class PresentBtn extends React.Component<{}, {}> {
   }
 }
 
-const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
-  actions: bindActionCreators(actions as any, dispatch)
+const mapDispatchToProps: MapDispatchToProps<IDispatchProps, {}> = (
+  dispatch: Dispatch<IDispatchProps>
+) => ({
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(null, mapDispatchToProps)(PresentBtn);

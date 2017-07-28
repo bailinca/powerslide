@@ -29,7 +29,7 @@ class CurrentSlide extends React.Component<IProps, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IProps, {}> = (state: IAppState) => {
   return {
     currentSlideIndex: state.currentSlideIndex,
     slides: state.slides,

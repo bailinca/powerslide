@@ -5,11 +5,11 @@ import Header from './header';
 import Edit from './edit';
 import Present from './present';
 
-interface IProps {
+interface IStateProps {
   view: IView;
 }
 
-class App extends React.Component<IProps, {}> {
+class App extends React.Component<IStateProps, {}> {
   render(): React.ReactElement<HTMLDivElement> {
     return (
       <div className="component app">
@@ -20,7 +20,7 @@ class App extends React.Component<IProps, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => ({
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => ({
   view: state.view
 });
 

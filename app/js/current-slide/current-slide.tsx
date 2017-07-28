@@ -5,13 +5,13 @@ import TitleText from './title-text';
 import TitlePic from './title-pic';
 import TitleOnly from './title-only';
 
-interface IProps {
+interface IStateProps {
   view: IView;
   slides: ISlide[];
   currentSlideIndex: number;
 }
 
-class CurrentSlide extends React.Component<IProps, {}> {
+class CurrentSlide extends React.Component<IStateProps, {}> {
   render(): React.ReactElement<HTMLDivElement> {
     const { slides, view, currentSlideIndex } = this.props;
     const type: string = slides[currentSlideIndex].type;
@@ -29,7 +29,7 @@ class CurrentSlide extends React.Component<IProps, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IProps, {}> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => {
   return {
     currentSlideIndex: state.currentSlideIndex,
     slides: state.slides,

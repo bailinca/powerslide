@@ -18,7 +18,7 @@ const common = {
 
 	context: resolve(__dirname, 'app'),
 
-	devtool: 'source-map',
+	devtool: 'eval-source-map',
 
 	devServer: {
 		hot: true,
@@ -38,7 +38,7 @@ const common = {
 		rules: [
 			{
 				test: [/\.ts?$/, /\.tsx?$/],
-				use: ['babel-loader', 'ts-loader', 'tslint-loader']
+				use: ['react-hot-loader/webpack', 'ts-loader', 'tslint-loader']
 			},
 			{
 				test: [/\.js?$/, /\.jsx?$/],
@@ -86,7 +86,7 @@ switch (process.env.npm_lifecycle_event) {
 		});
 		break;
 	case 'start':
-		module.exports = merge(common, {
+		module.exports = merge({
 			entry: [
 				'react-hot-loader/patch',
 				// activate HMR for React
@@ -106,7 +106,7 @@ switch (process.env.npm_lifecycle_event) {
 				new webpack.NamedModulesPlugin(),
 				// prints more readable module names in the browser console on HMR updates
 			]
-		});
+		}, common);
 		break;
 	default:
 		break;

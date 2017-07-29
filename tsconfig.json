@@ -1,18 +1,14 @@
 {
-	"compileOnSave": false,
-	"compilerOptions": {
-		"jsx": "react",
-		"moduleResolution": "node",
-		"noImplicitAny": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"sourceMap": true,
-		"target": "es6"
-	},
-	"exclude": [
-		"build",
-		"docs",
-		"node_modules"
-	],
-	"strictNullChecks": true
+  "compileOnSave": false,
+  "compilerOptions": {
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "exclude": ["build", "docs", "node_modules"],
+  "strictNullChecks": true
 }

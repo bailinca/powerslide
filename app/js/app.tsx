@@ -5,11 +5,11 @@ import Header from './header';
 import Edit from './edit';
 import Present from './present';
 
-class App extends React.Component<any, IAppState> {
-  static propTypes: React.ValidationMap<any> = {
-    view: React.PropTypes.string
-  };
+interface IStateProps {
+  view: IView;
+}
 
+class App extends React.Component<IStateProps, {}> {
   render(): React.ReactElement<HTMLDivElement> {
     return (
       <div className="component app">
@@ -20,7 +20,7 @@ class App extends React.Component<any, IAppState> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => ({
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => ({
   view: state.view
 });
 

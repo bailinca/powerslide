@@ -1,11 +1,11 @@
-import { Action, Reducer } from 'redux';
+import { AnyAction, Reducer } from 'redux';
 
 import { defaultState } from './defaultState';
 import * as actionTypes from './actionTypes';
 
 const reducer: Reducer<IAppState> = (
   currentState: IAppState = defaultState,
-  action: Action
+  action: AnyAction
 ): IAppState => {
   let slides: ISlide[];
 
@@ -23,17 +23,17 @@ const reducer: Reducer<IAppState> = (
       break;
 
     case actionTypes.PREV_SLIDE:
-      if (currentState.currentSlide > 0) {
+      if (currentState.currentSlideIndex > 0) {
         currentState = Object.assign({}, currentState, {
-          currentSlide: currentState.currentSlide - 1
+          currentSlideIndex: currentState.currentSlideIndex - 1
         });
       }
       break;
 
     case actionTypes.NEXT_SLIDE:
-      if (currentState.currentSlide < currentState.slides.length - 1) {
+      if (currentState.currentSlideIndex < currentState.slides.length - 1) {
         currentState = Object.assign({}, currentState, {
-          currentSlide: currentState.currentSlide + 1
+          currentSlideIndex: currentState.currentSlideIndex + 1
         });
       }
       break;
@@ -41,12 +41,12 @@ const reducer: Reducer<IAppState> = (
     case actionTypes.REMOVE_SLIDE:
       if (currentState.slides.length > 1) {
         slides = Array(...currentState.slides);
-        slides.splice(currentState.currentSlide, 1);
+        slides.splice(currentState.currentSlideIndex, 1);
         currentState = Object.assign({}, currentState, {
-          currentSlide:
-            slides.length === currentState.currentSlide
-              ? currentState.currentSlide - 1
-              : currentState.currentSlide,
+          currentSlideIndex:
+            slides.length === currentState.currentSlideIndex
+              ? currentState.currentSlideIndex - 1
+              : currentState.currentSlideIndex,
           slides
         });
       }
@@ -60,14 +60,14 @@ const reducer: Reducer<IAppState> = (
 
     case actionTypes.CHOOSE_SLIDE:
       slides = Array(...currentState.slides);
-      slides.splice(currentState.currentSlide + 1, null, {
+      slides.splice(currentState.currentSlideIndex + 1, null, {
         text: '',
         title: '',
-        type: (action as any).slideType,
+        type: action.slideType,
         url: ''
       });
       currentState = Object.assign({}, currentState, {
-        currentSlide: currentState.currentSlide + 1,
+        currentSlideIndex: currentState.currentSlideIndex + 1,
         slides
       });
       break;
@@ -80,7 +80,7 @@ const reducer: Reducer<IAppState> = (
 
     case actionTypes.CHANGE_PIC:
       slides = Array(...currentState.slides);
-      slides[currentState.currentSlide].url = (action as any).url;
+      slides[currentState.currentSlideIndex].url = action.url;
       currentState = Object.assign({}, currentState, {
         slides
       });
@@ -88,7 +88,7 @@ const reducer: Reducer<IAppState> = (
 
     case actionTypes.CHANGE_TEXT:
       slides = Array(...currentState.slides);
-      slides[currentState.currentSlide].text = (action as any).text;
+      slides[currentState.currentSlideIndex].text = action.text;
       currentState = Object.assign({}, currentState, {
         slides
       });
@@ -96,7 +96,7 @@ const reducer: Reducer<IAppState> = (
 
     case actionTypes.CHANGE_TITLE:
       slides = Array(...currentState.slides);
-      slides[currentState.currentSlide].title = (action as any).title;
+      slides[currentState.currentSlideIndex].title = action.title;
       currentState = Object.assign({}, currentState, {
         slides
       });

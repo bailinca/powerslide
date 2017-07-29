@@ -3,7 +3,7 @@ import * as React from 'react';
 import Title from './title';
 import Text from './text';
 
-class TitleText extends React.Component<IGenericProps, {}> {
+class TitleText extends React.Component<{}, {}> {
   render(): React.ReactElement<HTMLDivElement> {
     return (
       <div className="component title-text">

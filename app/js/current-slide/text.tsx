@@ -1,21 +1,31 @@
 import * as React from 'react';
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
-import * as actions from '../actions';
+import { actions } from '../actions';
 
-class Text extends React.Component<IAppState, {}> {
+interface IStateProps {
+  view: IView;
+  slides: ISlide[];
+  currentSlideIndex: number;
+}
+
+interface IDispatchProps {
+  actions: ActionCreatorsMapObject;
+}
+
+class Text extends React.Component<IStateProps & IDispatchProps, {}> {
   changeHandler(e: React.SyntheticEvent<{}>): void {
-    (this.props as any).actions.changeText((e.target as HTMLInputElement).value);
+    this.props.actions.changeText((e.target as HTMLInputElement).value);
   }
 
   render(): React.ReactElement<HTMLDivElement> {
-    const { slides, view, currentSlide } = this.props;
+    const { slides, view, currentSlideIndex } = this.props;
 
     return (
       <div className="component text">
         <textarea
-          value={slides[currentSlide].text}
+          value={slides[currentSlideIndex].text}
           onChange={this.changeHandler.bind(this)}
           disabled={view === 'edit' ? false : true}
         />
@@ -24,16 +34,18 @@ class Text extends React.Component<IAppState, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => {
   return {
-    currentSlide: state.currentSlide,
+    currentSlideIndex: state.currentSlideIndex,
     slides: state.slides,
     view: state.view
   };
 };
 
-const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
-  actions: bindActionCreators(actions as any, dispatch)
+const mapDispatchToProps: MapDispatchToProps<IDispatchProps, {}> = (
+  dispatch: Dispatch<IDispatchProps>
+) => ({
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Text);

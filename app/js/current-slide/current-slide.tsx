@@ -5,23 +5,23 @@ import TitleText from './title-text';
 import TitlePic from './title-pic';
 import TitleOnly from './title-only';
 
-class CurrentSlide extends React.Component<IAppState, {}> {
-  static propTypes: React.ValidationMap<any> = {
-    currentSlide: React.PropTypes.number,
-    slides: React.PropTypes.array,
-    view: React.PropTypes.string
-  };
+interface IStateProps {
+  view: IView;
+  slides: ISlide[];
+  currentSlideIndex: number;
+}
 
+class CurrentSlide extends React.Component<IStateProps, {}> {
   render(): React.ReactElement<HTMLDivElement> {
-    const { slides, view, currentSlide } = this.props;
-    const type: string = slides[currentSlide].type;
+    const { slides, view, currentSlideIndex } = this.props;
+    const type: string = slides[currentSlideIndex].type;
 
     return (
       <div className="component current-slide">
         {type === 'titleText' ? <TitleText /> : type === 'titlePic' ? <TitlePic /> : <TitleOnly />}
         {view === 'edit'
           ? <h3>
-              {currentSlide + 1 + ' / ' + slides.length}
+              {currentSlideIndex + 1 + ' / ' + slides.length}
             </h3>
           : null}
       </div>
@@ -29,9 +29,9 @@ class CurrentSlide extends React.Component<IAppState, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => {
   return {
-    currentSlide: state.currentSlide,
+    currentSlideIndex: state.currentSlideIndex,
     slides: state.slides,
     view: state.view
   };

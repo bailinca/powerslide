@@ -1,17 +1,26 @@
 import * as React from 'react';
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
-import * as actions from '../actions';
+import { actions } from '../actions';
 
-class Pic extends React.Component<IAppState, {}> {
+interface IStateProps {
+  slides: ISlide[];
+  currentSlideIndex: number;
+}
+
+interface IDispatchProps {
+  actions: ActionCreatorsMapObject;
+}
+
+class Pic extends React.Component<IStateProps & IDispatchProps, {}> {
   changeHandler(e: React.SyntheticEvent<{}>): void {
-    (this.props as any).actions.changePic((e.target as HTMLInputElement).value);
+    this.props.actions.changePic((e.target as HTMLInputElement).value);
   }
 
   render(): React.ReactElement<HTMLDivElement> {
-    const { slides, currentSlide } = this.props;
-    const url: string = slides[currentSlide].url;
+    const { slides, currentSlideIndex } = this.props;
+    const url: string = slides[currentSlideIndex].url;
 
     return (
       <div className="component pic" style={{ backgroundImage: `url(${url})` }}>
@@ -21,15 +30,15 @@ class Pic extends React.Component<IAppState, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => {
   return {
-    currentSlide: state.currentSlide,
+    currentSlideIndex: state.currentSlideIndex,
     slides: state.slides
   };
 };
 
-const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
-  actions: bindActionCreators(actions as any, dispatch)
+const mapDispatchToProps: MapDispatchToProps<IDispatchProps, {}> = (dispatch: Dispatch<IDispatchProps>) => ({
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pic);

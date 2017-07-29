@@ -4,13 +4,18 @@ import { connect, MapStateToProps } from 'react-redux';
 import EditBtn from './edit-btn';
 import PrevNext from './prev-next';
 
-class PresentControls extends React.Component<IAppState, {}> {
+interface IStateProps {
+  slides: ISlide[];
+  currentSlideIndex: number;
+}
+
+class PresentControls extends React.Component<IStateProps, {}> {
   render(): React.ReactElement<HTMLDivElement> {
-    const { slides, currentSlide } = this.props;
+    const { slides, currentSlideIndex } = this.props;
 
     return (
       <div className="component present-controls">
-        {currentSlide + 1 + ' / ' + slides.length}
+        {currentSlideIndex + 1 + ' / ' + slides.length}
         <PrevNext />
         <EditBtn />
       </div>
@@ -18,9 +23,9 @@ class PresentControls extends React.Component<IAppState, {}> {
   }
 }
 
-const mapStateToProps: MapStateToProps<IAppState, any> = (state: IAppState) => {
+const mapStateToProps: MapStateToProps<IStateProps, {}> = (state: IAppState) => {
   return {
-    currentSlide: state.currentSlide,
+    currentSlideIndex: state.currentSlideIndex,
     slides: state.slides
   };
 };

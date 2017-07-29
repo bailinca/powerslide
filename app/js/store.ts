@@ -1,4 +1,6 @@
 import { createStore, Store, Reducer } from 'redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
+
 import reducers from './reducers';
 
 import { defaultState } from './defaultState';
@@ -16,12 +18,14 @@ if (!lsState) {
 const store: Store<IAppState> = createStore(
   reducers,
   state,
-  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+  devToolsEnhancer({})
 );
 
+/* tslint:disable:no-any */
 if ((module as any).hot) {
   // Enable Webpack hot module replacement for reducers
   (module as any).hot.accept('./reducers', () => {
+    /* tslint:enable:no-any */
     /* tslint:disable:no-require-imports */
     const nextReducer: Reducer<IAppState> = require('./reducers').default;
     store.replaceReducer(nextReducer);

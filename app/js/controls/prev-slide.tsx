@@ -1,12 +1,16 @@
 import * as React from 'react';
 import { connect, MapDispatchToProps } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
-import * as actions from '../actions';
+import { actions } from '../actions';
 
-class PrevSlide extends React.Component<IGenericProps, {}> {
+interface IDispatchProps {
+  actions: ActionCreatorsMapObject;
+}
+
+class PrevSlide extends React.Component<IDispatchProps, {}> {
   clickHandler(): void {
-    (this.props as any).actions.prevSlide();
+    this.props.actions.prevSlide();
   }
 
   render(): React.ReactElement<HTMLDivElement> {
@@ -21,8 +25,8 @@ class PrevSlide extends React.Component<IGenericProps, {}> {
   }
 }
 
-const mapDispatchToProps: MapDispatchToProps<any, any> = (dispatch: any) => ({
-  actions: bindActionCreators(actions as any, dispatch)
+const mapDispatchToProps: MapDispatchToProps<IDispatchProps, {}> = (dispatch: Dispatch<IDispatchProps>) => ({
+  actions: bindActionCreators(actions, dispatch)
 });
 
 export default connect(null, mapDispatchToProps)(PrevSlide);

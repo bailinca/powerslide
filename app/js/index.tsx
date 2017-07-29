@@ -7,6 +7,7 @@ import 'balloon-css';
 import * as React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
 
 import App from './app';
 
@@ -16,8 +17,25 @@ const appElement: Element = document.createElement('div');
 document.body.appendChild(appElement);
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <AppContainer>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </AppContainer>,
   appElement
 );
+
+// Hot Module Replacement API
+
+if (module.hot) {
+  module.hot.accept('./app', () => {
+    render(
+      <AppContainer>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </AppContainer>,
+      appElement
+    );
+  });
+}

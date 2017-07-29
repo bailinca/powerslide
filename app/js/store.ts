@@ -21,11 +21,9 @@ const store: Store<IAppState> = createStore(
   devToolsEnhancer({})
 );
 
-/* tslint:disable:no-any */
-if ((module as any).hot) {
+if (module.hot) {
   // Enable Webpack hot module replacement for reducers
-  (module as any).hot.accept('./reducers', () => {
-    /* tslint:enable:no-any */
+  module.hot.accept('./reducers', () => {
     /* tslint:disable:no-require-imports */
     const nextReducer: Reducer<IAppState> = require('./reducers').default;
     store.replaceReducer(nextReducer);

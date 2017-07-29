@@ -27,10 +27,8 @@ render(
 
 // Hot Module Replacement API
 
-/* tslint:disable:no-any */
-if ((module as any).hot) {
-  (module as any).hot.accept('./app', () => {
-    /* tslint:enable:no-any */
+if (module.hot) {
+  module.hot.accept('./app', () => {
     render(
       <AppContainer>
         <Provider store={store}>

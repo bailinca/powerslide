@@ -35,7 +35,7 @@
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.17",
-    "@types/react": "^15.0.39",
+    "@types/react": "^15.6.0",
     "@types/react-addons-test-utils": "^0.14.19",
     "@types/react-dom": "^15.5.1",
     "@types/react-redux": "^4.4.47",
@@ -57,7 +57,7 @@
     "tslint-loader": "^3.5.3",
     "typescript": "^2.4.2",
     "url-loader": "^0.5.9",
-    "webpack": "^2.3.3",
+    "webpack": "^3.4.1",
     "webpack-config": "^7.0.0",
     "webpack-dev-server": "^2.6.1",
     "webpack-merge": "^4.1.0"

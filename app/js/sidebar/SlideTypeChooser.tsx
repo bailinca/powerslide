@@ -4,9 +4,9 @@ import { bindActionCreators, ActionCreatorsMapObject, Dispatch } from 'redux';
 
 import { actions } from '../actions';
 
-import SidebarTitleText from './sidebar-title-text';
-import SidebarTitlePic from './sidebar-title-pic';
-import SidebarTitleOnly from './sidebar-title-only';
+import SidebarTitleText from './SidebarTitleText';
+import SidebarTitlePic from './SidebarTitlePic';
+import SidebarTitleOnly from './SidebarTitleOnly';
 
 interface IDispatchProps {
   actions: ActionCreatorsMapObject;

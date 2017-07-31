@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect, MapStateToProps } from 'react-redux';
 
 import Controls from '../controls/controls';
-import SlideTypeChooser from './slide-type-chooser';
+import SlideTypeChooser from './SlideTypeChooser';
 
 interface IStateProps {
   sidebar: ISidebar;

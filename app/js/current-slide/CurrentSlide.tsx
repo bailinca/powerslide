@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { connect, MapStateToProps } from 'react-redux';
 
-import TitleText from './title-text';
-import TitlePic from './title-pic';
-import TitleOnly from './title-only';
+import TitleText from './TitleText';
+import TitlePic from './TitlePic';
+import TitleOnly from './TitleOnly';
 
 interface IStateProps {
   view: IView;

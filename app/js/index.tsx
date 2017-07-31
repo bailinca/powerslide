@@ -9,7 +9,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 
-import App from './app';
+import App from './App';
 import configureStore from './store';
 
 const store: Store<IAppState> = configureStore();
@@ -26,7 +26,7 @@ render(
 // Hot Module Replacement API
 
 if (module.hot) {
-  module.hot.accept('./app', () => {
+  module.hot.accept('./App', () => {
     render(
       <Provider store={store}>
         <App />

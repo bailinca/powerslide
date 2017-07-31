@@ -15,19 +15,20 @@ if (!lsState) {
   state = JSON.parse(lsState);
 }
 
-const store: Store<IAppState> = createStore(
-  reducers,
-  state,
-  devToolsEnhancer({})
-);
+export default function configureStore(): Store<IAppState> {
+  const store: Store<IAppState> = createStore(
+    reducers,
+    state,
+    devToolsEnhancer({})
+  );
 
-if (module.hot) {
-  // Enable Webpack hot module replacement for reducers
-  module.hot.accept('./reducers', () => {
-    /* tslint:disable:no-require-imports */
-    const nextReducer: Reducer<IAppState> = require('./reducers').default;
-    store.replaceReducer(nextReducer);
-  });
+  if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('./reducers', () => {
+      /* tslint:disable:no-require-imports */
+      const nextReducer: Reducer<IAppState> = require('./reducers').default;
+      store.replaceReducer(nextReducer);
+    });
+  }
+  return store;
 }
-
-export default store;

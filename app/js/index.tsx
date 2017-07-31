@@ -7,21 +7,19 @@ import 'balloon-css';
 import * as React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { AppContainer } from 'react-hot-loader';
+import { Store } from 'redux';
 
 import App from './app';
+import configureStore from './store';
 
-import store from './store';
-
+const store: Store<IAppState> = configureStore();
 const appElement: Element = document.createElement('div');
 document.body.appendChild(appElement);
 
 render(
-  <AppContainer>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </AppContainer>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   appElement
 );
 
@@ -30,11 +28,9 @@ render(
 if (module.hot) {
   module.hot.accept('./app', () => {
     render(
-      <AppContainer>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </AppContainer>,
+      <Provider store={store}>
+        <App />
+      </Provider>,
       appElement
     );
   });

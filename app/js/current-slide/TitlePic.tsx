@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Title from './title';
-import Pic from './pic';
+import Title from './Title';
+import Pic from './Pic';
 
 class TitlePic extends React.Component<{}, {}> {
   render(): React.ReactElement<HTMLDivElement> {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import PrevSlide from './prev-slide';
-import NextSlide from './next-slide';
+import PrevSlide from './PrevSlide';
+import NextSlide from './NextSlide';
 
 class PrevNext extends React.Component<{}, {}> {
   render(): React.ReactElement<HTMLDivElement> {

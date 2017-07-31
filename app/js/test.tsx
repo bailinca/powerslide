@@ -4,7 +4,7 @@ import * as React from 'react';
 import { expect } from 'chai';
 import * as ReactTestUtils from 'react-dom/test-utils';
 
-import Text from './current-slide/text';
+import Text from './current-slide/Text';
 
 describe('Text Component', () => {
   it('has correct type', () => {

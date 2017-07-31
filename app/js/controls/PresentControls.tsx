@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { connect, MapStateToProps } from 'react-redux';
 
-import EditBtn from './edit-btn';
-import PrevNext from './prev-next';
+import EditBtn from './EditBtn';
+import PrevNext from './PrevNext';
 
 interface IStateProps {
   slides: ISlide[];

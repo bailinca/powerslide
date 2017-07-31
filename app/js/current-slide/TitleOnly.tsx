@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Title from './title';
+import Title from './Title';
 
 class TitleOnly extends React.Component<{}, {}> {
   render(): React.ReactElement<HTMLDivElement> {

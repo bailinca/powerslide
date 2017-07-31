@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import PresentBtn from './present-btn';
-import AddSlide from './add-slide';
-import RemoveSlide from './remove-slide';
-import PrevNext from './prev-next';
+import PresentBtn from './PresentBtn';
+import AddSlide from './AddSlide';
+import RemoveSlide from './RemoveSlide';
+import PrevNext from './PrevNext';
 
 class Controls extends React.Component<{}, {}> {
   render(): React.ReactElement<HTMLDivElement> {

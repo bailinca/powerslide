@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { connect, MapStateToProps } from 'react-redux';
 
-import Header from './header';
-import Edit from './edit';
-import Present from './present';
+import Header from './Header';
+import Edit from './Edit';
+import Present from './Present';
 
 interface IStateProps {
   view: IView;

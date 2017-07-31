@@ -48,8 +48,8 @@ const common = {
         use: ['url-loader']
       },
       {
-        test: /\.(ico|eot|otf|webp|ttf)(\?.*)?$/,
-        use: ['file-loader']
+        test: /\.(ico|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
+        use: ['url-loader']
       },
       {
         test: /\.scss$/,
@@ -59,10 +59,6 @@ const common = {
         test: /\.css?$/,
         use: ['style-loader', 'css-loader']
       },
-      {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: ['url-loader']
-      }
     ]
   }
 };

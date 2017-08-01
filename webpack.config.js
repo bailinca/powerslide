@@ -29,7 +29,8 @@ const common = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'powerslide'
+      title: 'powerslide',
+      favicon: 'img/favicon.ico'
     })
   ],
 
@@ -45,11 +46,11 @@ const common = {
       },
       {
         test: [/\.png?$/, /\.jpg?$/, /\.jpeg?$/, /\.bmp?$/, /\.svg?$/, /\.gif?$/],
-        use: ['url-loader']
+        use: ['file-loader']
       },
       {
         test: /\.(ico|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-        use: ['url-loader']
+        use: ['file-loader']
       },
       {
         test: /\.scss$/,
@@ -70,11 +71,6 @@ switch (process.env.npm_lifecycle_event) {
         new webpack.optimize.UglifyJsPlugin({
           compress: {
             warnings: false
-          }
-        }),
-        new webpack.DefinePlugin({
-          'process.env': {
-            NODE_ENV: JSON.stringify('production')
           }
         })
       ]

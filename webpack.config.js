@@ -29,7 +29,8 @@ const common = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'powerslide'
+      title: 'powerslide',
+      favicon: 'img/favicon.ico'
     })
   ],
 

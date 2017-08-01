@@ -46,11 +46,11 @@ const common = {
       },
       {
         test: [/\.png?$/, /\.jpg?$/, /\.jpeg?$/, /\.bmp?$/, /\.svg?$/, /\.gif?$/],
-        use: ['url-loader']
+        use: ['file-loader']
       },
       {
         test: /\.(ico|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-        use: ['url-loader']
+        use: ['file-loader']
       },
       {
         test: /\.scss$/,

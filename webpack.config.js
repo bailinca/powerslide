@@ -42,7 +42,8 @@ const common = {
       },
       {
         test: [/\.js?$/, /\.jsx?$/],
-        use: ['babel-loader']
+        use: ['babel-loader'],
+        exclude: /node_modules/
       },
       {
         test: [/\.png?$/, /\.jpg?$/, /\.jpeg?$/, /\.bmp?$/, /\.svg?$/, /\.gif?$/],

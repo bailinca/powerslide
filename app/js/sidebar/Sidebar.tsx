@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect, MapStateToProps } from 'react-redux';
 
-import Controls from '../controls/controls';
+import Controls from '../controls/Controls';
 import SlideTypeChooser from './SlideTypeChooser';
 
 interface IStateProps {
